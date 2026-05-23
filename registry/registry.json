@@ -98,6 +98,27 @@
       "description": "Standalone trust strip — caption on top, six logos (text) below in a 6/3/2 column grid. Logos fade on hover. Minimal section padding to slot between other blocks.",
       "dependencies": [],
       "registryDependencies": []
+    },
+    {
+      "name": "hero-5",
+      "title": "Hero 5",
+      "description": "Waitlist/signup hero — centered announcement pill, headline, subtitle, then an email input + submit button form (works with form action — no client state). Trust note below the form and an avatar social-proof strip at the bottom.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "features-2",
+      "title": "Features 2",
+      "description": "Alternating split — three feature rows with image on one side and text on the other, flipping sides each row. Each row has eyebrow badge, heading, paragraph, checked bullet list, and an arrow link.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "pricing-2",
+      "title": "Pricing 2",
+      "description": "Two-tier pricing — Free vs Pro side-by-side (stacked on mobile). Pro card is inverted (bg-primary) with a 'Popular' pill. Same feature-list pattern as pricing-1 but trimmed for freemium/MVP positioning.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
     }
   ]
 }
