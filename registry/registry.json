@@ -77,6 +77,27 @@
       "description": "Centered call-to-action card with inverted primary background, subtle radial-gradient overlay, eyebrow pill, large headline, subtitle, and dual buttons (primary inverted + ghost). Designed to anchor the bottom of a landing page.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["button"]
+    },
+    {
+      "name": "faq-1",
+      "title": "FAQ 1",
+      "description": "Centered FAQ with eyebrow + title + subtitle followed by a vertical list of expandable items. Uses native <details>/<summary> — zero JS, fully accessible. Plus icon rotates 45° on open.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "testimonials-1",
+      "title": "Testimonials 1",
+      "description": "Three-column grid of 6 testimonial cards. Each card has a serif quote mark, the quote text, then a footer with colored avatar initials, author name and role. Grid collapses to two columns on tablet and one on mobile.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "logos-1",
+      "title": "Logos 1",
+      "description": "Standalone trust strip — caption on top, six logos (text) below in a 6/3/2 column grid. Logos fade on hover. Minimal section padding to slot between other blocks.",
+      "dependencies": [],
+      "registryDependencies": []
     }
   ]
 }

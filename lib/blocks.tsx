@@ -11,6 +11,9 @@ import Navbar1 from "@/registry/navbar-1";
 import Footer1 from "@/registry/footer-1";
 import Features1 from "@/registry/features-1";
 import Cta1 from "@/registry/cta-1";
+import Faq1 from "@/registry/faq-1";
+import Testimonials1 from "@/registry/testimonials-1";
+import Logos1 from "@/registry/logos-1";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -24,4 +27,7 @@ export const blockComponents: Record<string, ComponentType> = {
   "footer-1": Footer1,
   "features-1": Features1,
   "cta-1": Cta1,
+  "faq-1": Faq1,
+  "testimonials-1": Testimonials1,
+  "logos-1": Logos1,
 };
