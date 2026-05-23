@@ -30,7 +30,7 @@ export default async function BlockIframePreview({
   }
 
   return (
-    <div className={`theme-${theme}`}>
+    <div className={`theme-${theme} min-h-screen bg-background text-foreground`}>
       <Component />
     </div>
   );
