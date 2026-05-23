@@ -9,6 +9,8 @@ import About2 from "@/registry/about-2";
 import Pricing1 from "@/registry/pricing-1";
 import Navbar1 from "@/registry/navbar-1";
 import Footer1 from "@/registry/footer-1";
+import Features1 from "@/registry/features-1";
+import Cta1 from "@/registry/cta-1";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -20,4 +22,6 @@ export const blockComponents: Record<string, ComponentType> = {
   "pricing-1": Pricing1,
   "navbar-1": Navbar1,
   "footer-1": Footer1,
+  "features-1": Features1,
+  "cta-1": Cta1,
 };

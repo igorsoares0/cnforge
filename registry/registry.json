@@ -63,6 +63,20 @@
       "description": "Multi-column footer — brand block with description and three social icons on the left (lg:col-span-2), three link columns on the right (product · company · resources). Bottom bar with copyright and legal links.",
       "dependencies": [],
       "registryDependencies": []
+    },
+    {
+      "name": "features-1",
+      "title": "Features 1",
+      "description": "Centered eyebrow + headline + subtitle, followed by a 6-card grid of features (icon in muted square · title · description). Three columns on desktop, two on tablet, one on mobile. Six lucide icons available via the `icon` enum (zap, shield, code, layers, sparkles, chart).",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "cta-1",
+      "title": "CTA 1",
+      "description": "Centered call-to-action card with inverted primary background, subtle radial-gradient overlay, eyebrow pill, large headline, subtitle, and dual buttons (primary inverted + ghost). Designed to anchor the bottom of a landing page.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
     }
   ]
 }
