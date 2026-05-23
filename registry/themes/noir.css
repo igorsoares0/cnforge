@@ -1,0 +1,22 @@
+.theme-noir {
+  --background: #09090b;
+  --foreground: #ffffff;
+  --card: #18181b;
+  --card-foreground: #ffffff;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --primary: #ffffff;
+  --primary-foreground: #09090b;
+
+  --quote: rgb(99 102 241 / 0.1);
+  --quote-border: rgb(99 102 241 / 0.2);
+  --quote-foreground: #f4f4f5;
+  --quote-mark: #a5b4fc;
+
+  --success: #34d399;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.18;
+}

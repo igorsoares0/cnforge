@@ -1,0 +1,22 @@
+.theme-3tchat {
+  --background: #f8f1fa;
+  --foreground: #3d1845;
+  --card: #ffffff;
+  --card-foreground: #3d1845;
+  --muted: #f3eaf5;
+  --muted-foreground: #8c7392;
+  --border: #ead8ef;
+  --primary: #3d1845;
+  --primary-foreground: #ffffff;
+
+  --quote: #efe1f3;
+  --quote-border: #e0c8e8;
+  --quote-foreground: #2d1133;
+  --quote-mark: #7d3a8a;
+
+  --success: #059669;
+
+  --title-weight: 800;
+  --title-leading: 1.02;
+  --sparkline-fill-opacity: 0.12;
+}

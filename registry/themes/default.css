@@ -1,0 +1,22 @@
+.theme-default {
+  --background: #ffffff;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --primary: #09090b;
+  --primary-foreground: #ffffff;
+
+  --quote: rgb(239 246 255 / 0.7);
+  --quote-border: #dbeafe;
+  --quote-foreground: #18181b;
+  --quote-mark: #3b82f6;
+
+  --success: #059669;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.12;
+}

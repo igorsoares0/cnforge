@@ -1,0 +1,68 @@
+{
+  "themes": ["default", "3tchat", "noir", "solar", "midnight"],
+  "blocks": [
+    {
+      "name": "hero-1",
+      "title": "Hero 1",
+      "description": "Hero section with announcement card on the left and a 2x2 stats grid on the right (active builds · trusted by · deploys sparkline · testimonial). Same structure across themes.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "hero-2",
+      "title": "Hero 2",
+      "description": "Centered hero with announcement pill, large headline, dual CTAs and a six-logo trust strip. Single-column composition that scales from mobile to desktop.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "hero-3",
+      "title": "Hero 3",
+      "description": "Developer-flavored split hero — headline, dual CTAs and an avatar social-proof strip on the left, code-window mockup with traffic-light dots and a syntax-highlighted snippet on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "hero-4",
+      "title": "Hero 4",
+      "description": "Image-led split hero — announcement pill, headline, subtitle, dual CTAs and avatar social proof on the left; product photo with a floating stat card (icon + value + caption) anchored bottom-right on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "about-1",
+      "title": "About 1",
+      "description": "Editorial about section — eyebrow + headline on the left, two-paragraph mission and CTA link on the right, anchored by a four-up stats strip below (founded · customers · countries · team).",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "about-2",
+      "title": "About 2",
+      "description": "Image-led split about — eyebrow, headline, mission paragraph, two inline stats and dual CTAs on the left; portrait team photo with a floating 'Est.' badge on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "pricing-1",
+      "title": "Pricing 1",
+      "description": "Three-tier pricing grid with centered header — Starter, Pro (featured with 'Most popular' badge and inverted card), Enterprise. Each tier shows price, period, description, primary CTA and a 5-item feature list with check icons.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "navbar-1",
+      "title": "Navbar 1",
+      "description": "Sticky top navigation — brand + version badge on the left, primary links in the middle (md+), secondary auth link and primary CTA on the right. Mobile collapses to brand + CTA only.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "footer-1",
+      "title": "Footer 1",
+      "description": "Multi-column footer — brand block with description and three social icons on the left (lg:col-span-2), three link columns on the right (product · company · resources). Bottom bar with copyright and legal links.",
+      "dependencies": [],
+      "registryDependencies": []
+    }
+  ]
+}

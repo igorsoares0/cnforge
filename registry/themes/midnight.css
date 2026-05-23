@@ -1,0 +1,22 @@
+.theme-midnight {
+  --background: #020617;
+  --foreground: #ffffff;
+  --card: #0f172a;
+  --card-foreground: #ffffff;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --border: #1e293b;
+  --primary: #0ea5e9;
+  --primary-foreground: #ffffff;
+
+  --quote: rgb(14 165 233 / 0.1);
+  --quote-border: rgb(14 165 233 / 0.2);
+  --quote-foreground: #f1f5f9;
+  --quote-mark: #7dd3fc;
+
+  --success: #22d3ee;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.18;
+}

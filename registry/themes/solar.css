@@ -1,0 +1,22 @@
+.theme-solar {
+  --background: #fdf7eb;
+  --foreground: #451a03;
+  --card: #ffffff;
+  --card-foreground: #451a03;
+  --muted: #fef3c7;
+  --muted-foreground: rgb(120 53 15 / 0.7);
+  --border: rgb(253 230 138 / 0.7);
+  --primary: #d97706;
+  --primary-foreground: #ffffff;
+
+  --quote: #fff7ed;
+  --quote-border: #fed7aa;
+  --quote-foreground: #451a03;
+  --quote-mark: #f97316;
+
+  --success: #047857;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.14;
+}

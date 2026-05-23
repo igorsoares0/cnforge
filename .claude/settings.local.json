@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:shadcnblocks.com)",
+      "WebFetch(domain:www.shadcn.io)",
+      "Bash(npm run *)",
+      "Read(//tmp/cnforge-client-test/components/**)",
+      "Read(//tmp/cnforge-client-test/**)",
+      "Bash(npx --yes shadcn@latest add @cnforge/theme-noir --yes)"
+    ]
+  }
+}
