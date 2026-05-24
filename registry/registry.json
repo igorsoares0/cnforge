@@ -287,6 +287,69 @@
       "description": "Auth page — centered card with brand icon, email/password form, social login buttons (GitHub + Google), forgot password link, and sign-up redirect. Vertically centered, min-height 80vh.",
       "dependencies": [],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-3",
+      "title": "Pricing 3",
+      "description": "Three-tier pricing with monthly/annual toggle — Starter, Pro (featured with border-2 and 'Most popular' pill), Enterprise. Client component with useState for billing period. Save 20% badge on annual.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-6",
+      "title": "Hero 6",
+      "description": "Video/demo hero — centered headline + subtitle + dual CTAs above an aspect-video embed placeholder with play button overlay. Designed for product walkthroughs and demo videos.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "cta-3",
+      "title": "CTA 3",
+      "description": "Newsletter CTA — bordered card with headline, subtitle, inline email input + subscribe button, and trust note. Compact single-purpose conversion block.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "testimonials-3",
+      "title": "Testimonials 3",
+      "description": "Testimonial marquee — cards scroll horizontally in a continuous CSS animation loop with gradient edge fades. Configurable speed. No JS required for animation.",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "features-3",
+      "title": "Features 3",
+      "description": "Bento grid — asymmetric feature layout with optional 'wide' span cards (col-span-2). Six features in a visually interesting grid instead of uniform columns.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "footer-3",
+      "title": "Footer 3",
+      "description": "Newsletter footer — multi-column layout like footer-1 but with an email subscribe form in the brand column. Social icons + legal links in bottom bar.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "about-3",
+      "title": "About 3",
+      "description": "Company timeline — vertical milestone list with year circles, connector line, and cards for each milestone (year, title, description). Mobile-friendly with badge fallback.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "navbar-3",
+      "title": "Navbar 3",
+      "description": "Transparent overlay navbar — no background, no border, positioned absolute over hero content. Same link/CTA/mobile pattern but with transparent/frosted aesthetic for dark hero sections.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "faq-3",
+      "title": "FAQ 3",
+      "description": "Two-column FAQ — questions split evenly into left and right columns using native details/summary. Same accordion pattern as faq-1 but with better use of horizontal space on desktop.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
     }
   ]
 }

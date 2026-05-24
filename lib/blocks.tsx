@@ -41,6 +41,15 @@ import Comparison1 from "@/registry/comparison-1";
 import Gallery1 from "@/registry/gallery-1";
 import NotFound1 from "@/registry/404-1";
 import Login1 from "@/registry/login-1";
+import Pricing3 from "@/registry/pricing-3";
+import Hero6 from "@/registry/hero-6";
+import Cta3 from "@/registry/cta-3";
+import Testimonials3 from "@/registry/testimonials-3";
+import Features3 from "@/registry/features-3";
+import Footer3 from "@/registry/footer-3";
+import About3 from "@/registry/about-3";
+import Navbar3 from "@/registry/navbar-3";
+import Faq3 from "@/registry/faq-3";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -84,4 +93,13 @@ export const blockComponents: Record<string, ComponentType> = {
   "gallery-1": Gallery1,
   "404-1": NotFound1,
   "login-1": Login1,
+  "pricing-3": Pricing3,
+  "hero-6": Hero6,
+  "cta-3": Cta3,
+  "testimonials-3": Testimonials3,
+  "features-3": Features3,
+  "footer-3": Footer3,
+  "about-3": About3,
+  "navbar-3": Navbar3,
+  "faq-3": Faq3,
 };
