@@ -406,6 +406,34 @@
       "description": "Contact with office info — split layout with email/phone/address cards and office hours on the left, map placeholder on the right. No form, focused on location and availability.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "hero-7",
+      "title": "Hero 7",
+      "description": "Product showcase hero — centered headline + dual CTAs + star rating strip, with a browser-chrome mockup below featuring sidebar navigation and block category grid. Dashboard preview aesthetic.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-4",
+      "title": "Pricing 4",
+      "description": "Feature comparison table — three plan columns with price, CTA, and grouped feature rows using check/minus/text values. Zebra-style category headers. Horizontally scrollable on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "contact-4",
+      "title": "Contact 4",
+      "description": "Multi-office contact — three office location cards with city initials, address, email, phone, plus a bottom CTA banner. No form, focused on global presence.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "footer-4",
+      "title": "Footer 4",
+      "description": "CTA footer — centered call-to-action section on top (title + subtitle + button), brand + social icons and three link columns below, copyright bar at the bottom.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
     }
   ]
 }
