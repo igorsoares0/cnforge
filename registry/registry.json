@@ -434,6 +434,27 @@
       "description": "CTA footer — centered call-to-action section on top (title + subtitle + button), brand + social icons and three link columns below, copyright bar at the bottom.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["button"]
+    },
+    {
+      "name": "hero-8",
+      "title": "Hero 8",
+      "description": "Split hero with testimonial — headline, subtitle, dual CTAs, and avatar social-proof strip on the left; large testimonial card with quote, author avatar, and attribution on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "login-2",
+      "title": "Login 2",
+      "description": "Split login — full-height primary-colored branding panel with testimonial on the left (hidden on mobile), sign-in form with social buttons + email/password on the right.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "login-3",
+      "title": "Login 3",
+      "description": "Sign-up form — centered card with brand icon, social buttons (GitHub + Google), first/last name, email, password fields, TOS/privacy links, and sign-in redirect. Registration counterpart to login-1.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }

@@ -62,6 +62,9 @@ import Hero7 from "@/registry/hero-7";
 import Pricing4 from "@/registry/pricing-4";
 import Contact4 from "@/registry/contact-4";
 import Footer4 from "@/registry/footer-4";
+import Hero8 from "@/registry/hero-8";
+import Login2 from "@/registry/login-2";
+import Login3 from "@/registry/login-3";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -126,4 +129,7 @@ export const blockComponents: Record<string, ComponentType> = {
   "pricing-4": Pricing4,
   "contact-4": Contact4,
   "footer-4": Footer4,
+  "hero-8": Hero8,
+  "login-2": Login2,
+  "login-3": Login3,
 };
