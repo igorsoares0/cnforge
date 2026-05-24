@@ -161,6 +161,41 @@
       "description": "Top announcement bar — full-width primary background with text, optional CTA link with arrow, and dismissible X button. Client component with useState for dismiss. Compact single-line height.",
       "dependencies": ["lucide-react"],
       "registryDependencies": []
+    },
+    {
+      "name": "navbar-2",
+      "title": "Navbar 2",
+      "description": "Centered navigation — logo left, links absolutely centered in the bar, search icon + auth link + primary CTA on the right. Same hamburger mobile menu as navbar-1. Optional search button.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "footer-2",
+      "title": "Footer 2",
+      "description": "Minimal single-row footer — brand logo left, inline nav links centered, social icons right. Copyright in a slim bottom bar. Compact alternative to footer-1's multi-column layout.",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "cta-2",
+      "title": "CTA 2",
+      "description": "Split CTA card — text column (eyebrow, headline, subtitle, check bullets, dual buttons) on the left, terminal mockup with CLI output on the right. Bordered card instead of inverted background.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "faq-2",
+      "title": "FAQ 2",
+      "description": "Categorized FAQ — category sidebar on the left (horizontal tabs on mobile), filtered accordion on the right. Client component with useState for active category. Same details/summary pattern as faq-1.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "testimonials-2",
+      "title": "Testimonials 2",
+      "description": "Featured single testimonial — large centered blockquote with serif opening mark, author avatar + name + role, and an optional metric card below. High-impact alternative to the testimonials-1 grid.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
