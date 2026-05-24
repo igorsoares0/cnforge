@@ -245,6 +245,48 @@
       "description": "Vertical timeline — steps stacked vertically with a connector line, icon circles and numbered badges on the left, text on the right. Alternative to how-it-works-1's horizontal layout.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "changelog-1",
+      "title": "Changelog 1",
+      "description": "Release timeline — vertical list with version badges, dates, titles, and bullet-point changes. Connector line on the left. Ideal for product update pages.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "integrations-1",
+      "title": "Integrations 1",
+      "description": "Integration grid — 6 cards with logo initials, category tag, name, description, and 'Learn more' arrow link. Hover border highlight. 3-col desktop, 2-col tablet, 1-col mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "comparison-1",
+      "title": "Comparison 1",
+      "description": "Feature comparison table — us vs them with check/minus icons and text values. Zebra-striped rows in a rounded bordered container. Ideal for competitive positioning.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "gallery-1",
+      "title": "Gallery 1",
+      "description": "Screenshot gallery — 6-item grid with muted placeholder areas, initials, and optional captions. 3-col desktop, 2-col tablet, 1-col mobile. Designed for product screenshots.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "404-1",
+      "title": "404 Page",
+      "description": "Error page — large faded 404 code, headline, subtitle, and back-to-home CTA button with arrow. Vertically centered, min-height 80vh. Drop-in not-found page.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "login-1",
+      "title": "Login 1",
+      "description": "Auth page — centered card with brand icon, email/password form, social login buttons (GitHub + Google), forgot password link, and sign-up redirect. Vertically centered, min-height 80vh.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
