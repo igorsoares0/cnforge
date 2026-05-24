@@ -1,5 +1,5 @@
 {
-  "themes": ["default", "3tchat", "noir", "solar", "midnight"],
+  "themes": ["default", "3tchat", "noir", "solar", "midnight", "ocean", "rose", "forest"],
   "blocks": [
     {
       "name": "hero-1",

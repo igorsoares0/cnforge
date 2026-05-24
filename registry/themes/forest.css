@@ -1,0 +1,22 @@
+.theme-forest {
+  --background: #f0fdf4;
+  --foreground: #14210d;
+  --card: #ffffff;
+  --card-foreground: #14210d;
+  --muted: #dcfce7;
+  --muted-foreground: rgb(22 101 52 / 0.6);
+  --border: rgb(187 247 208 / 0.7);
+  --primary: #16a34a;
+  --primary-foreground: #ffffff;
+
+  --quote: rgb(240 253 244 / 0.8);
+  --quote-border: #bbf7d0;
+  --quote-foreground: #14210d;
+  --quote-mark: #22c55e;
+
+  --success: #0d9488;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.12;
+}

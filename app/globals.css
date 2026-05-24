@@ -7,6 +7,9 @@
 @import "../registry/themes/solar.css";
 @import "../registry/themes/3tchat.css";
 @import "../registry/themes/midnight.css";
+@import "../registry/themes/ocean.css";
+@import "../registry/themes/rose.css";
+@import "../registry/themes/forest.css";
 
 @custom-variant dark (&:is(.dark *));
 

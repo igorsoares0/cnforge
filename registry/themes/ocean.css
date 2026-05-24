@@ -1,0 +1,22 @@
+.theme-ocean {
+  --background: #0c1222;
+  --foreground: #e2e8f0;
+  --card: #131b2e;
+  --card-foreground: #e2e8f0;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --border: #1e293b;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  --quote: rgb(59 130 246 / 0.08);
+  --quote-border: rgb(59 130 246 / 0.2);
+  --quote-foreground: #e2e8f0;
+  --quote-mark: #60a5fa;
+
+  --success: #34d399;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.16;
+}

@@ -1,0 +1,22 @@
+.theme-rose {
+  --background: #fff5f7;
+  --foreground: #1c1017;
+  --card: #ffffff;
+  --card-foreground: #1c1017;
+  --muted: #fce7f3;
+  --muted-foreground: rgb(136 19 55 / 0.6);
+  --border: rgb(251 207 232 / 0.7);
+  --primary: #e11d48;
+  --primary-foreground: #ffffff;
+
+  --quote: rgb(255 241 242 / 0.8);
+  --quote-border: #fecdd3;
+  --quote-foreground: #1c1017;
+  --quote-mark: #f43f5e;
+
+  --success: #059669;
+
+  --title-weight: 700;
+  --title-leading: 1.05;
+  --sparkline-fill-opacity: 0.12;
+}
