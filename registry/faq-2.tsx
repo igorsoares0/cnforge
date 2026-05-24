@@ -108,13 +108,13 @@ export default function Faq2({
         </div>
 
         <div className="mt-12 grid gap-8 sm:mt-16 lg:grid-cols-[200px_1fr] lg:gap-12">
-          <nav className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-x-visible">
+          <nav className="flex flex-wrap gap-1 lg:flex-col">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setActive(cat)}
-                className={`shrink-0 rounded-lg px-4 py-2 text-left text-sm font-medium transition-colors ${
+                className={`rounded-lg px-4 py-2 text-left text-sm font-medium transition-colors ${
                   active === cat
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"
