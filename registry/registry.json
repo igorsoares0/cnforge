@@ -119,6 +119,48 @@
       "description": "Two-tier pricing — Free vs Pro side-by-side (stacked on mobile). Pro card is inverted (bg-primary) with a 'Popular' pill. Same feature-list pattern as pricing-1 but trimmed for freemium/MVP positioning.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["button", "badge"]
+    },
+    {
+      "name": "stats-1",
+      "title": "Stats 1",
+      "description": "Four-stat grid with icons — each stat in a bordered card with large number, label, and lucide icon. 2-col on mobile, 4-col on desktop. Ideal for social proof and trust metrics.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "team-1",
+      "title": "Team 1",
+      "description": "Team grid — 4 member cards with colored avatar initials, name, role, short bio, and social links (X, LinkedIn, GitHub via inline SVGs). 1-col mobile, 2-col tablet, 4-col desktop.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "how-it-works-1",
+      "title": "How It Works 1",
+      "description": "Three-step process — numbered circles with lucide icons, title, and description. Vertical connector line on desktop. Explains a product flow or onboarding sequence.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "contact-1",
+      "title": "Contact 1",
+      "description": "Split contact section — info column (title, subtitle, email/phone/address with icons) on the left, form card (name, email, subject, message, submit) on the right. Stacked on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "blog-1",
+      "title": "Blog 1",
+      "description": "Three-card blog grid — each card has a placeholder image area, colored category tag, title, excerpt, author avatar + name, date, and 'Read more' footer link. 1-col mobile, 2-col tablet, 3-col desktop.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "banner-1",
+      "title": "Banner 1",
+      "description": "Top announcement bar — full-width primary background with text, optional CTA link with arrow, and dismissible X button. Client component with useState for dismiss. Compact single-line height.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
     }
   ]
 }
