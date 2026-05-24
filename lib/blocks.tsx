@@ -28,6 +28,13 @@ import Footer2 from "@/registry/footer-2";
 import Cta2 from "@/registry/cta-2";
 import Faq2 from "@/registry/faq-2";
 import Testimonials2 from "@/registry/testimonials-2";
+import Logos2 from "@/registry/logos-2";
+import Stats2 from "@/registry/stats-2";
+import Banner2 from "@/registry/banner-2";
+import Blog2 from "@/registry/blog-2";
+import Contact2 from "@/registry/contact-2";
+import Team2 from "@/registry/team-2";
+import HowItWorks2 from "@/registry/how-it-works-2";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -58,4 +65,11 @@ export const blockComponents: Record<string, ComponentType> = {
   "cta-2": Cta2,
   "faq-2": Faq2,
   "testimonials-2": Testimonials2,
+  "logos-2": Logos2,
+  "stats-2": Stats2,
+  "banner-2": Banner2,
+  "blog-2": Blog2,
+  "contact-2": Contact2,
+  "team-2": Team2,
+  "how-it-works-2": HowItWorks2,
 };

@@ -196,6 +196,55 @@
       "description": "Featured single testimonial — large centered blockquote with serif opening mark, author avatar + name + role, and an optional metric card below. High-impact alternative to the testimonials-1 grid.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "logos-2",
+      "title": "Logos 2",
+      "description": "Infinite marquee logo strip — logos scroll horizontally in a continuous loop with CSS animation. Gradient fade on edges. Speed configurable via prop. No JS required for animation.",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "stats-2",
+      "title": "Stats 2",
+      "description": "Inline stats strip — four metrics in a minimal horizontal row without cards. Top and bottom border. Compact section to slot between content blocks.",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "banner-2",
+      "title": "Banner 2",
+      "description": "Split announcement bar — text on the left with success dot, CTA button on the right, dismiss X. Card background instead of primary. Client component with useState.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
+    },
+    {
+      "name": "blog-2",
+      "title": "Blog 2",
+      "description": "Featured + list blog layout — large featured card on the left with image placeholder, two horizontal cards stacked on the right. Category tags, author avatars, dates, and arrow links.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "contact-2",
+      "title": "Contact 2",
+      "description": "Centered contact form — eyebrow + title + subtitle on top, single card form below (first/last name, email, company, message, submit). Simpler alternative to contact-1's split layout.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "team-2",
+      "title": "Team 2",
+      "description": "Team list — horizontal rows instead of cards. Each row has avatar initials, name, role, and social links aligned right. Compact alternative to team-1's grid layout.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "how-it-works-2",
+      "title": "How It Works 2",
+      "description": "Vertical timeline — steps stacked vertically with a connector line, icon circles and numbered badges on the left, text on the right. Alternative to how-it-works-1's horizontal layout.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
     }
   ]
 }
