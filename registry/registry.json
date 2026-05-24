@@ -350,6 +350,34 @@
       "description": "Two-column FAQ — questions split evenly into left and right columns using native details/summary. Same accordion pattern as faq-1 but with better use of horizontal space on desktop.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "waitlist-1",
+      "title": "Waitlist 1",
+      "description": "Coming-soon waitlist page — centered brand icon, eyebrow badge, headline, subtitle, email input + join button, launch date pill, and three feature-teaser cards. Vertically centered min-height 80vh.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "careers-1",
+      "title": "Careers 1",
+      "description": "Job listings section — eyebrow + title + subtitle, then a vertical list of job cards with title, department badge (color-coded), location with pin icon, type, and apply button. Hover border highlight.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "cookie-banner-1",
+      "title": "Cookie Banner 1",
+      "description": "Fixed bottom cookie consent banner — message with learn-more link, accept and decline buttons. Client component with useState for dismiss. Responsive: stacked on mobile, inline on desktop.",
+      "dependencies": [],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "roadmap-1",
+      "title": "Roadmap 1",
+      "description": "Product roadmap timeline — vertical list with quarter badges, status indicators (completed/in-progress/planned), titles, descriptions, and bullet items. Connector line on desktop.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
