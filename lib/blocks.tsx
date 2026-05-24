@@ -54,6 +54,10 @@ import Waitlist1 from "@/registry/waitlist-1";
 import Careers1 from "@/registry/careers-1";
 import CookieBanner1 from "@/registry/cookie-banner-1";
 import Roadmap1 from "@/registry/roadmap-1";
+import Logos3 from "@/registry/logos-3";
+import Stats3 from "@/registry/stats-3";
+import Team3 from "@/registry/team-3";
+import Contact3 from "@/registry/contact-3";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -110,4 +114,8 @@ export const blockComponents: Record<string, ComponentType> = {
   "careers-1": Careers1,
   "cookie-banner-1": CookieBanner1,
   "roadmap-1": Roadmap1,
+  "logos-3": Logos3,
+  "stats-3": Stats3,
+  "team-3": Team3,
+  "contact-3": Contact3,
 };

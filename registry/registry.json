@@ -378,6 +378,34 @@
       "description": "Product roadmap timeline — vertical list with quarter badges, status indicators (completed/in-progress/planned), titles, descriptions, and bullet items. Connector line on desktop.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "logos-3",
+      "title": "Logos 3",
+      "description": "Logo card grid — 6 cards with colored initials icon, company name, and tagline. Hover border highlight. 3-col desktop, 2-col tablet, 1-col mobile. Richer alternative to logos-1 strip and logos-2 marquee.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "stats-3",
+      "title": "Stats 3",
+      "description": "Stats with progress bars — 4 metric cards with large value, label, animated progress bar, and description. Visual alternative to stats-1 icons and stats-2 inline strip.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "team-3",
+      "title": "Team 3",
+      "description": "Team card grid — large cards with avatar placeholder area, name, role, extended bio, and social links in a footer divider. 4-col desktop, 2-col tablet, 1-col mobile.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "contact-3",
+      "title": "Contact 3",
+      "description": "Contact with office info — split layout with email/phone/address cards and office hours on the left, map placeholder on the right. No form, focused on location and availability.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
     }
   ]
 }
