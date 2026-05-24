@@ -38,25 +38,25 @@ const DEFAULT_COLUMNS: FooterColumn[] = [
   {
     title: "Product",
     links: [
-      { label: "Features", href: "#" },
-      { label: "Pricing", href: "#" },
-      { label: "Changelog", href: "#" },
+      { label: "Features", href: "#features" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "Changelog", href: "#changelog" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "About", href: "#about" },
+      { label: "Blog", href: "#blog" },
+      { label: "Careers", href: "#careers" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Docs", href: "#" },
-      { label: "Guides", href: "#" },
-      { label: "Support", href: "#" },
+      { label: "Docs", href: "#docs" },
+      { label: "Guides", href: "#guides" },
+      { label: "Support", href: "#support" },
     ],
   },
 ];
@@ -68,8 +68,8 @@ const DEFAULT_SOCIALS: FooterSocial[] = [
 ];
 
 const DEFAULT_LEGAL = [
-  { label: "Privacy", href: "#" },
-  { label: "Terms", href: "#" },
+  { label: "Privacy", href: "#privacy" },
+  { label: "Terms", href: "#terms" },
 ];
 
 export default function Footer3({
