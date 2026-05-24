@@ -75,20 +75,16 @@ export default function Hero5({
             placeholder={inputPlaceholder}
             required
             autoComplete="email"
-            className="h-12 flex-1 rounded-xl border border-border bg-card px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            className="h-12 w-full flex-1 rounded-xl border border-border bg-card px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20"
           />
           <Button
             type="submit"
             size="lg"
-            nativeButton={false}
             className="h-12 rounded-xl bg-primary px-6 text-sm text-primary-foreground hover:opacity-90"
-            render={
-              <button type="submit">
-                {ctaLabel}
-                <ArrowRight className="size-4" />
-              </button>
-            }
-          />
+          >
+            {ctaLabel}
+            <ArrowRight className="size-4" />
+          </Button>
         </form>
 
         <p className="mt-3 text-xs text-muted-foreground">{trustNote}</p>
