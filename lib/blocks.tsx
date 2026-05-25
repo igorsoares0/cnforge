@@ -65,6 +65,10 @@ import Footer4 from "@/registry/footer-4";
 import Hero8 from "@/registry/hero-8";
 import Login2 from "@/registry/login-2";
 import Login3 from "@/registry/login-3";
+import Dashboard1 from "@/registry/dashboard-1";
+import Onboarding1 from "@/registry/onboarding-1";
+import Settings1 from "@/registry/settings-1";
+import Notification1 from "@/registry/notification-1";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -132,4 +136,8 @@ export const blockComponents: Record<string, ComponentType> = {
   "hero-8": Hero8,
   "login-2": Login2,
   "login-3": Login3,
+  "dashboard-1": Dashboard1,
+  "onboarding-1": Onboarding1,
+  "settings-1": Settings1,
+  "notification-1": Notification1,
 };

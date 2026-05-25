@@ -455,6 +455,34 @@
       "description": "Sign-up form — centered card with brand icon, social buttons (GitHub + Google), first/last name, email, password fields, TOS/privacy links, and sign-in redirect. Registration counterpart to login-1.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "dashboard-1",
+      "title": "Dashboard 1",
+      "description": "Analytics dashboard — four metric cards with sparkline charts and trend deltas, large revenue-over-time area chart, and a recent activity feed with avatars. App-style overview block.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "onboarding-1",
+      "title": "Onboarding 1",
+      "description": "Onboarding stepper — progress bar with step count, numbered step cards with completed/current/upcoming states, check icon for done steps, back/continue navigation buttons.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "settings-1",
+      "title": "Settings 1",
+      "description": "Account settings page — sidebar navigation (horizontal tabs on mobile), profile form (name/email/bio), notification toggles with descriptions, billing section with current plan badge and action buttons.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "notification-1",
+      "title": "Notification 1",
+      "description": "Notification feed — unread count badge, list of notification items with type icons (info/success/warning), timestamps, read/unread indicator dots, and mark-all-as-read action.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
