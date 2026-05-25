@@ -77,6 +77,9 @@ import Dashboard2 from "@/registry/dashboard-2";
 import Notification2 from "@/registry/notification-2";
 import Blogpost1 from "@/registry/blogpost-1";
 import Blogpost2 from "@/registry/blogpost-2";
+import Hero9 from "@/registry/hero-9";
+import Hero10 from "@/registry/hero-10";
+import Hero11 from "@/registry/hero-11";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -156,4 +159,7 @@ export const blockComponents: Record<string, ComponentType> = {
   "notification-2": Notification2,
   "blogpost-1": Blogpost1,
   "blogpost-2": Blogpost2,
+  "hero-9": Hero9,
+  "hero-10": Hero10,
+  "hero-11": Hero11,
 };

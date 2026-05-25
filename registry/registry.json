@@ -539,6 +539,27 @@
       "description": "Magazine article with sidebar — large title, full-width cover, sticky table of contents and share buttons on the left (hidden on mobile), prose body with code snippets and blockquotes on the right.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "hero-9",
+      "title": "Hero 9",
+      "description": "Live activity hero — headline and dual CTAs on the left, stacked live event cards with avatars and animated pulse dots on the right. Social proof through real-time activity feed.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-10",
+      "title": "Hero 10",
+      "description": "Typographic hero — oversized two-tone headline (foreground + primary accent line), single large CTA button, and a full-width stats strip with dividers below. Minimal, no cards or mockups.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-11",
+      "title": "Hero 11",
+      "description": "Image-first split hero — headline, subtitle, dual CTAs and logo trust strip on the left; product image (or placeholder with camera icon) with rounded border, shadow, and floating stat card anchored bottom-left on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
