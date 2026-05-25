@@ -92,6 +92,14 @@ import Profile1 from "@/registry/profile-1";
 import Payment1 from "@/registry/payment-1";
 import Signup1 from "@/registry/signup-1";
 import Signup2 from "@/registry/signup-2";
+import ForgotPassword1 from "@/registry/forgot-password-1";
+import Maintenance1 from "@/registry/maintenance-1";
+import Pricing5 from "@/registry/pricing-5";
+import HowItWorks3 from "@/registry/how-it-works-3";
+import Banner3 from "@/registry/banner-3";
+import Blog3 from "@/registry/blog-3";
+import Sidebar1 from "@/registry/sidebar-1";
+import Contact5 from "@/registry/contact-5";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -186,4 +194,12 @@ export const blockComponents: Record<string, ComponentType> = {
   "payment-1": Payment1,
   "signup-1": Signup1,
   "signup-2": Signup2,
+  "forgot-password-1": ForgotPassword1,
+  "maintenance-1": Maintenance1,
+  "pricing-5": Pricing5,
+  "how-it-works-3": HowItWorks3,
+  "banner-3": Banner3,
+  "blog-3": Blog3,
+  "sidebar-1": Sidebar1,
+  "contact-5": Contact5,
 };

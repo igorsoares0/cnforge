@@ -644,6 +644,62 @@
       "description": "Plan-selection signup — radio card plan picker (Free/Pro) at the top, then social buttons and email/password form below. Combines plan choice with account creation in a single flow.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "forgot-password-1",
+      "title": "Forgot Password 1",
+      "description": "Password reset form — centered card with brand icon, title, email input, submit button, and back-to-login link. Minimal single-purpose auth flow.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "maintenance-1",
+      "title": "Maintenance 1",
+      "description": "Maintenance page — centered layout with brand icon, animated status badge, progress bar, task checklist with done/in-progress/pending states, ETA, and status page link.",
+      "dependencies": [],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "pricing-5",
+      "title": "Pricing 5",
+      "description": "Toggle pricing — three-tier grid with monthly/annual billing switch showing different prices. Annual shows crossed-out monthly price and save badge. Most popular tier highlighted.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "how-it-works-3",
+      "title": "How It Works 3",
+      "description": "Numbered card grid — four large cards with colored number icons, titles, and descriptions. 4-col desktop, 2-col tablet, 1-col mobile. Visual alternative to icon-based and timeline variants.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "banner-3",
+      "title": "Banner 3",
+      "description": "Gradient app banner — subtle primary gradient background, badge pill, text, inline CTA link, and dismiss X button. Client component. Softer alternative to solid-color banner-1.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
+    },
+    {
+      "name": "blog-3",
+      "title": "Blog 3",
+      "description": "Newsletter-style blog list — vertical list with date column and title+excerpt, no images or cards. Compact, content-focused alternative to card-based blog-1 and featured blog-2.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "sidebar-1",
+      "title": "Sidebar 1",
+      "description": "App sidebar navigation — brand header, icon nav items with optional badges, collapsible sections with titles, and user avatar with name/email and sign-out button in the footer.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
+    },
+    {
+      "name": "contact-5",
+      "title": "Contact 5",
+      "description": "Minimal contact form — centered layout with just name, email, and message fields plus submit button. No sidebar info, no map, no extras. The cleanest contact block.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
