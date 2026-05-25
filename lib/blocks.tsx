@@ -85,6 +85,11 @@ import Waitlist2 from "@/registry/waitlist-2";
 import Onboarding2 from "@/registry/onboarding-2";
 import Careers2 from "@/registry/careers-2";
 import Settings2 from "@/registry/settings-2";
+import CookieBanner2 from "@/registry/cookie-banner-2";
+import Roadmap2 from "@/registry/roadmap-2";
+import EmptyState1 from "@/registry/empty-state-1";
+import Profile1 from "@/registry/profile-1";
+import Payment1 from "@/registry/payment-1";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -172,4 +177,9 @@ export const blockComponents: Record<string, ComponentType> = {
   "onboarding-2": Onboarding2,
   "careers-2": Careers2,
   "settings-2": Settings2,
+  "cookie-banner-2": CookieBanner2,
+  "roadmap-2": Roadmap2,
+  "empty-state-1": EmptyState1,
+  "profile-1": Profile1,
+  "payment-1": Payment1,
 };

@@ -595,6 +595,41 @@
       "description": "Tab-based settings — horizontal underline tabs (General/Security/API keys/Danger zone), profile section with avatar, API keys list with revoke actions, and red danger zone card with delete button.",
       "dependencies": [],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "cookie-banner-2",
+      "title": "Cookie Banner 2",
+      "description": "Toast-style cookie consent — fixed bottom-right card with per-category toggles (essential/analytics/marketing), accept all, reject all, and save preferences buttons. Client component.",
+      "dependencies": [],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "roadmap-2",
+      "title": "Roadmap 2",
+      "description": "Kanban roadmap — three columns (Planned/In Progress/Done) with feature cards, status-colored headers, and optional quarter tags. Board-style alternative to roadmap-1 timeline.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "empty-state-1",
+      "title": "Empty State 1",
+      "description": "Empty state placeholder — dashed-border icon box, headline, description, and dual CTAs (primary action + learn more). For when there's no data to display yet.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "profile-1",
+      "title": "Profile 1",
+      "description": "Public profile page — large avatar with initials, name, handle, role badge, bio, edit CTA, four-stat grid, and achievement badges section with colored pills.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "payment-1",
+      "title": "Payment 1",
+      "description": "Checkout form — card details and billing address sections on the left, sticky order summary with line items, tax, total, and pay button on the right. Responsive single-column on mobile.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
