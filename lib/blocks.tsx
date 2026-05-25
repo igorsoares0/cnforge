@@ -90,6 +90,8 @@ import Roadmap2 from "@/registry/roadmap-2";
 import EmptyState1 from "@/registry/empty-state-1";
 import Profile1 from "@/registry/profile-1";
 import Payment1 from "@/registry/payment-1";
+import Signup1 from "@/registry/signup-1";
+import Signup2 from "@/registry/signup-2";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -182,4 +184,6 @@ export const blockComponents: Record<string, ComponentType> = {
   "empty-state-1": EmptyState1,
   "profile-1": Profile1,
   "payment-1": Payment1,
+  "signup-1": Signup1,
+  "signup-2": Signup2,
 };

@@ -630,6 +630,20 @@
       "description": "Checkout form — card details and billing address sections on the left, sticky order summary with line items, tax, total, and pay button on the right. Responsive single-column on mobile.",
       "dependencies": [],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "signup-1",
+      "title": "Signup 1",
+      "description": "Split signup — feature checklist with brand on the left (hidden on mobile), registration form with social buttons (GitHub/Google), name, email, password, TOS links on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "signup-2",
+      "title": "Signup 2",
+      "description": "Plan-selection signup — radio card plan picker (Free/Pro) at the top, then social buttons and email/password form below. Combines plan choice with account creation in a single flow.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
