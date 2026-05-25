@@ -483,6 +483,48 @@
       "description": "Notification feed — unread count badge, list of notification items with type icons (info/success/warning), timestamps, read/unread indicator dots, and mark-all-as-read action.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "changelog-2",
+      "title": "Changelog 2",
+      "description": "Card-based release notes — each release in its own bordered card with version pill, type badge (feature/fix/improvement), date, title, and bullet changes. No timeline, cleaner for long changelogs.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "integrations-2",
+      "title": "Integrations 2",
+      "description": "Categorized integration list — grouped by category with section headers, each integration as a compact row with icon, name, description, and connect/connected status. Management-style layout.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "comparison-2",
+      "title": "Comparison 2",
+      "description": "Side-by-side comparison cards — two large cards (us vs others) with feature checklists using check/minus icons. Primary border highlight on 'us' card. No table, fully mobile-friendly.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "gallery-2",
+      "title": "Gallery 2",
+      "description": "Masonry gallery — CSS columns layout with alternating tall/short image placeholders. Organic, Pinterest-style grid instead of uniform rows. Responsive 1→2→3 columns.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "dashboard-2",
+      "title": "Dashboard 2",
+      "description": "Workspace dashboard — three top metric cards, then two-column layout with task list (status badges, assignee avatars) and project progress bars. Team-oriented alternative to dashboard-1.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "notification-2",
+      "title": "Notification 2",
+      "description": "Grouped notification feed — centered layout with notifications grouped by date (today/yesterday/this week), colored type dots, unread count badge, compact single-line items.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
