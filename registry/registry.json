@@ -525,6 +525,20 @@
       "description": "Grouped notification feed — centered layout with notifications grouped by date (today/yesterday/this week), colored type dots, unread count badge, compact single-line items.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "blogpost-1",
+      "title": "Blogpost 1",
+      "description": "Classic article layout — back link, category badge, large title, author header with avatar, cover image placeholder, prose body with headings, code block, blockquote, tag pills, and author bio footer card.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "blogpost-2",
+      "title": "Blogpost 2",
+      "description": "Magazine article with sidebar — large title, full-width cover, sticky table of contents and share buttons on the left (hidden on mobile), prose body with code snippets and blockquotes on the right.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }

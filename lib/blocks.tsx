@@ -75,6 +75,8 @@ import Comparison2 from "@/registry/comparison-2";
 import Gallery2 from "@/registry/gallery-2";
 import Dashboard2 from "@/registry/dashboard-2";
 import Notification2 from "@/registry/notification-2";
+import Blogpost1 from "@/registry/blogpost-1";
+import Blogpost2 from "@/registry/blogpost-2";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -152,4 +154,6 @@ export const blockComponents: Record<string, ComponentType> = {
   "gallery-2": Gallery2,
   "dashboard-2": Dashboard2,
   "notification-2": Notification2,
+  "blogpost-1": Blogpost1,
+  "blogpost-2": Blogpost2,
 };
