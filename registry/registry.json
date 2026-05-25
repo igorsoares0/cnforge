@@ -560,6 +560,41 @@
       "description": "Image-first split hero — headline, subtitle, dual CTAs and logo trust strip on the left; product image (or placeholder with camera icon) with rounded border, shadow, and floating stat card anchored bottom-left on the right.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "404-2",
+      "title": "404 Page 2",
+      "description": "Illustrated 404 — code badge in a rounded square, headline, subtitle, search bar with icon, popular pages link grid (2-col), and back-to-home CTA. Helps users find their way.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "waitlist-2",
+      "title": "Waitlist 2",
+      "description": "Split waitlist — primary-colored branding panel with testimonial and feature list on the left (hidden on mobile), email form with spots-remaining progress bar on the right. Urgency-driven.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "onboarding-2",
+      "title": "Onboarding 2",
+      "description": "Horizontal checklist — 5 step cards in a row (responsive grid) with numbered circles, completed/current/upcoming states, and a centered continue button. Compact alternative to onboarding-1 vertical stepper.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "careers-2",
+      "title": "Careers 2",
+      "description": "Department grid — cards per department with colored icon, name, open role count, description, and 'View roles' link. Total roles summary and browse-all CTA at the bottom.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "settings-2",
+      "title": "Settings 2",
+      "description": "Tab-based settings — horizontal underline tabs (General/Security/API keys/Danger zone), profile section with avatar, API keys list with revoke actions, and red danger zone card with delete button.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }

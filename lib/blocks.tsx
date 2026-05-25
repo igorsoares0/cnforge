@@ -80,6 +80,11 @@ import Blogpost2 from "@/registry/blogpost-2";
 import Hero9 from "@/registry/hero-9";
 import Hero10 from "@/registry/hero-10";
 import Hero11 from "@/registry/hero-11";
+import NotFound2 from "@/registry/404-2";
+import Waitlist2 from "@/registry/waitlist-2";
+import Onboarding2 from "@/registry/onboarding-2";
+import Careers2 from "@/registry/careers-2";
+import Settings2 from "@/registry/settings-2";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -162,4 +167,9 @@ export const blockComponents: Record<string, ComponentType> = {
   "hero-9": Hero9,
   "hero-10": Hero10,
   "hero-11": Hero11,
+  "404-2": NotFound2,
+  "waitlist-2": Waitlist2,
+  "onboarding-2": Onboarding2,
+  "careers-2": Careers2,
+  "settings-2": Settings2,
 };
