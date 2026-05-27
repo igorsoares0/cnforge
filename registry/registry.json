@@ -735,6 +735,41 @@
       "description": "Mega footer with newsletter — top section splits brand info + social links (left) and email subscription form (right). Below, a 4-column sitemap grid. Bottom bar with copyright and legal links.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["button"]
+    },
+    {
+      "name": "hero-12",
+      "title": "Hero 12",
+      "description": "Full-bleed background image hero — optional image behind a semi-transparent overlay with gradient fade. Centered content: announcement badge, large headline, subtitle, dual CTAs, and trust logo strip. Falls back to muted background when no image is provided.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "navbar-4",
+      "title": "Navbar 4",
+      "description": "Mega navbar with dropdown — Products link reveals a 2-column dropdown panel with icons, titles, and descriptions. Desktop hover-open, mobile accordion with grouped items. Full responsive hamburger menu.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "stats-4",
+      "title": "Stats 4",
+      "description": "Stats with icons and trend indicators — 4-card grid, each with icon, large value, label, trend badge (up/down with colored pill), and change description. Different from progress-bar style of stats-3.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "team-4",
+      "title": "Team 4",
+      "description": "Split-layout team section — sticky header (eyebrow + title + subtitle) on the left, 2-column card grid on the right. Each card has avatar, name, role, extended bio, and social links. Hover border effect.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "sidebar-2",
+      "title": "Sidebar 2",
+      "description": "Collapsible sidebar with search and notifications — brand + bell icon with badge count at top, search input, user avatar section, then collapsible nav sections with chevron toggles. Sign out button at bottom.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
     }
   ]
 }
