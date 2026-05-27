@@ -110,6 +110,11 @@ import Navbar4 from "@/registry/navbar-4";
 import Stats4 from "@/registry/stats-4";
 import Team4 from "@/registry/team-4";
 import Sidebar2 from "@/registry/sidebar-2";
+import Login4 from "@/registry/login-4";
+import Login5 from "@/registry/login-5";
+import Signup3 from "@/registry/signup-3";
+import Signup4 from "@/registry/signup-4";
+import Testimonials5 from "@/registry/testimonials-5";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -222,4 +227,9 @@ export const blockComponents: Record<string, ComponentType> = {
   "stats-4": Stats4,
   "team-4": Team4,
   "sidebar-2": Sidebar2,
+  "login-4": Login4,
+  "login-5": Login5,
+  "signup-3": Signup3,
+  "signup-4": Signup4,
+  "testimonials-5": Testimonials5,
 };

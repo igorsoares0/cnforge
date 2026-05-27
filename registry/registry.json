@@ -770,6 +770,41 @@
       "description": "Collapsible sidebar with search and notifications — brand + bell icon with badge count at top, search input, user avatar section, then collapsible nav sections with chevron toggles. Sign out button at bottom.",
       "dependencies": ["lucide-react"],
       "registryDependencies": []
+    },
+    {
+      "name": "login-4",
+      "title": "Login 4",
+      "description": "Split-screen login — left panel with brand, headline, subtitle, and testimonial quote card; right side with social buttons, divider, email/password form. Panel hidden on mobile, form takes full width.",
+      "dependencies": [],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "login-5",
+      "title": "Login 5",
+      "description": "Magic link login — centered layout with brand icon, full-width social buttons (GitHub, Google), then a single email field with mail icon and 'Send magic link' CTA. No password field. Ultra-minimal.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "signup-3",
+      "title": "Signup 3",
+      "description": "Card-based signup — everything inside a rounded card with brand, title, inline feature badges (check icons), social buttons, divider, first/last name + email + password form, and legal links.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "signup-4",
+      "title": "Signup 4",
+      "description": "Split-screen signup — left panel with brand, headline, stat counters, and avatar social proof strip; right side with social buttons, divider, name + email + password form. Panel hidden on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
+    },
+    {
+      "name": "testimonials-5",
+      "title": "Testimonials 5",
+      "description": "Featured testimonial layout — one large hero quote card (big quote mark, extended text, large avatar) centered at the top, plus a 3-column row of smaller quote cards below. Best for highlighting a key customer story.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
