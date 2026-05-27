@@ -700,6 +700,41 @@
       "description": "Minimal contact form — centered layout with just name, email, and message fields plus submit button. No sidebar info, no map, no extras. The cleanest contact block.",
       "dependencies": [],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "features-4",
+      "title": "Features 4",
+      "description": "Bento-grid features section — one large highlight card (2-col span with icon, stat counter) paired with four smaller feature cards. Asymmetric layout that scales from stacked mobile to 3-col desktop.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "testimonials-4",
+      "title": "Testimonials 4",
+      "description": "Masonry testimonial grid with star ratings — centered header (eyebrow + title), then a CSS-columns masonry layout of quote cards. Each card has 5-star rating, quote, and author info with avatar and company.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "faq-4",
+      "title": "FAQ 4",
+      "description": "Category-grouped FAQ — centered header, then questions grouped by category with sticky category labels on the left and accordion items on the right. Clean two-column layout on desktop, stacked on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "cta-4",
+      "title": "CTA 4",
+      "description": "Full-width CTA card with gradient overlay — large rounded container with subtle primary gradient, sparkle badge, bold headline, dual CTAs, and a stat strip with dividers. Eye-catching conversion section.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "footer-5",
+      "title": "Footer 5",
+      "description": "Mega footer with newsletter — top section splits brand info + social links (left) and email subscription form (right). Below, a 4-column sitemap grid. Bottom bar with copyright and legal links.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"]
     }
   ]
 }
