@@ -945,6 +945,41 @@
       "description": "Usage-based tiers table — rows of usage ranges (10k/100k/1M/10M+) with per-unit rates, one row highlighted as 'sweet spot'. Below: included-everywhere checklist card with CTAs.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-13",
+      "title": "Hero 13",
+      "description": "Developer-focused hero — split 2-col with eyebrow + headline + copy + inline install command pill + CTAs on the left, and a code editor card (traffic-light header + filename + multi-line TSX sample) on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-14",
+      "title": "Hero 14",
+      "description": "Dashboard preview hero — centered headline + CTAs at the top, followed by a large faux-browser card (chrome + URL pill + sidebar nav + KPI cards + revenue chart) anchoring the section.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-15",
+      "title": "Hero 15",
+      "description": "Marquee hero — centered eyebrow/title/CTAs at the top, then an infinite-scroll CSS marquee strip of brand wordmarks (with edge fades and prefers-reduced-motion fallback) below the headline.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-16",
+      "title": "Hero 16",
+      "description": "Big-stat focal hero — split layout with a massive number (text-[10rem]) + trend pill + caption on the left, headline + paragraph + 3-row proof list + CTAs on the right.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "hero-17",
+      "title": "Hero 17",
+      "description": "Floating screenshot cards hero — centered headline and CTAs with 4 rotated mock cards absolutely positioned around the text on desktop; on mobile they collapse into a 2x2 grid below the content.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
