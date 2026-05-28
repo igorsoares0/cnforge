@@ -875,6 +875,41 @@
       "description": "Multi-office footer — brand + tagline + sales/press email definition list + socials on the left, 4-column office addresses grid (city, multi-line address, HQ pill) on the right.",
       "dependencies": [],
       "registryDependencies": []
+    },
+    {
+      "name": "features-5",
+      "title": "Features 5",
+      "description": "Editorial numbered feature list — left-aligned 2-col layout (large 01/02/03 numbers + eyebrow + title + paragraph + optional inline link). Magazine feel, no icons, big typography.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "features-6",
+      "title": "Features 6",
+      "description": "Tabbed feature switcher (use client) — vertical tab rail on the left (icon + label) and a content panel on the right showing the active tab's title, description, bullets, and a code/terminal preview card.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "features-7",
+      "title": "Features 7",
+      "description": "Before/after pairs — table-style grid with a 'Before' column (struck-through muted text) and 'After' column (highlighted), separated by an arrow. Stacks to per-pair cards on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "features-8",
+      "title": "Features 8",
+      "description": "Stat-driven feature cards — 2-column grid where each card leads with a massive number (with optional unit suffix), then title + description below. Best for highlighting concrete metrics.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "features-9",
+      "title": "Features 9",
+      "description": "Compact icon checklist — dense 2-3 column grid of small icon + label pairs (18 items), each row separated by a thin border. Best for 'everything you get' inventory sections.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
     }
   ]
 }
