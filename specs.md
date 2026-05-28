@@ -102,9 +102,9 @@ registry/
 
 O endpoint HTTP fica em `app/r/[name]/route.ts` e serve cada item no schema `registry-item.json` do shadcn.
 
-Estado atual: 115 blocos × 8 themes (`default`, `3tchat`, `noir`, `solar`, `midnight`, `ocean`, `rose`, `forest`).
+Estado atual: 121 blocos × 8 themes (`default`, `3tchat`, `noir`, `solar`, `midnight`, `ocean`, `rose`, `forest`).
 
-Categorias: hero (12), about (3), pricing (5), features (4), navbar (4), footer (5), cta (4), faq (4), testimonials (5), logos (3), stats (4), team (4), how-it-works (3), contact (5), blog (3), blogpost (2), banner (3), changelog (2), integrations (2), comparison (2), gallery (2), 404 (2), login (5), waitlist (2), careers (2), cookie-banner (2), roadmap (2), dashboard (2), onboarding (2), settings (2), notification (2), empty-state (1), profile (1), payment (1), signup (4), forgot-password (1), maintenance (1), sidebar (2).
+Categorias: hero (12), about (4), pricing (5), features (4), navbar (4), footer (5), cta (4), faq (4), testimonials (5), logos (3), stats (4), team (4), how-it-works (4), contact (5), blog (3), blogpost (3), banner (3), changelog (2), integrations (2), comparison (3), gallery (3), 404 (2), login (5), waitlist (2), careers (2), cookie-banner (2), roadmap (2), dashboard (3), onboarding (2), settings (2), notification (2), empty-state (1), profile (1), payment (1), signup (4), forgot-password (1), maintenance (1), sidebar (2).
 
 ---
 

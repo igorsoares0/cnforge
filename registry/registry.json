@@ -805,6 +805,48 @@
       "description": "Featured testimonial layout — one large hero quote card (big quote mark, extended text, large avatar) centered at the top, plus a 3-column row of smaller quote cards below. Best for highlighting a key customer story.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "dashboard-3",
+      "title": "Dashboard 3",
+      "description": "Analytics dashboard — 4 metric cards, segmented range selector (24h/7d/30d/90d), bar chart of sessions by day, donut chart of traffic sources with legend, top-pages table (stacked cards on mobile).",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "gallery-3",
+      "title": "Gallery 3",
+      "description": "Showcase gallery — one large featured image on the left (with floating tag badge and gradient caption overlay) plus a 2-column thumbnail strip on the right. Hero-style layout for highlighting a primary screenshot.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "comparison-3",
+      "title": "Comparison 3",
+      "description": "3-tier comparison matrix — Free/Pro/Studio columns with one highlighted, header CTAs, alternating-row feature table (checkmarks, dashes, or text values). Stacks to per-tier cards on mobile.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "about-4",
+      "title": "About 4",
+      "description": "Manifesto-style about — centered big quote (font-serif quote mark + large headline) at top with attribution, then a 2-column values grid with icon cards (compass/wrench/sparkles/heart).",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "how-it-works-4",
+      "title": "How it works 4",
+      "description": "Zigzag steps with code previews — each step alternates left/right with a code/terminal snippet card (filename header + 3 traffic-light dots) on one side and numbered description on the other.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
+    },
+    {
+      "name": "blogpost-3",
+      "title": "Blogpost 3",
+      "description": "Magazine-style blogpost — full-bleed cover image with gradient fade, floating header card (badge, title, author), drop-cap opening paragraph, full-width pull quote between paragraphs, related-posts card at the end.",
+      "dependencies": [],
+      "registryDependencies": ["badge"]
     }
   ]
 }
