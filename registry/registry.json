@@ -910,6 +910,41 @@
       "description": "Compact icon checklist — dense 2-3 column grid of small icon + label pairs (18 items), each row separated by a thin border. Best for 'everything you get' inventory sections.",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "pricing-6",
+      "title": "Pricing 6",
+      "description": "Single-plan all-inclusive card — one big centered card with badge, strikethrough compare price + massive price, CTA + secondary link, guarantee line, 2-column feature checklist. Best for lifetime/one-time offers.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-7",
+      "title": "Pricing 7",
+      "description": "Compact 4-tier grid — Hobby/Starter/Team/Business in 4 columns, smaller and denser than typical 3-tier layouts. Featured tier with 2px primary border and floating Popular pill.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-8",
+      "title": "Pricing 8",
+      "description": "Base plan + add-ons — primary plan card on the left (Pro tier with feature checklist) and a stacked list of optional add-ons on the right (custom theme, priority support, Figma files, bespoke blocks).",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-9",
+      "title": "Pricing 9",
+      "description": "Persona switcher (use client) — 3 persona cards at top (Solo/Team/Enterprise with icons + taglines) that swap the entire plan set below. Each persona has its own 2-plan layout.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "pricing-10",
+      "title": "Pricing 10",
+      "description": "Usage-based tiers table — rows of usage ranges (10k/100k/1M/10M+) with per-unit rates, one row highlighted as 'sweet spot'. Below: included-everywhere checklist card with CTAs.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
     }
   ]
 }
