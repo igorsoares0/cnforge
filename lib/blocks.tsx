@@ -121,6 +121,10 @@ import Comparison3 from "@/registry/comparison-3";
 import About4 from "@/registry/about-4";
 import HowItWorks4 from "@/registry/how-it-works-4";
 import Blogpost3 from "@/registry/blogpost-3";
+import Footer6 from "@/registry/footer-6";
+import Footer7 from "@/registry/footer-7";
+import Footer8 from "@/registry/footer-8";
+import Footer9 from "@/registry/footer-9";
 
 export const blockComponents: Record<string, ComponentType> = {
   "hero-1": Hero1,
@@ -244,4 +248,8 @@ export const blockComponents: Record<string, ComponentType> = {
   "about-4": About4,
   "how-it-works-4": HowItWorks4,
   "blogpost-3": Blogpost3,
+  "footer-6": Footer6,
+  "footer-7": Footer7,
+  "footer-8": Footer8,
+  "footer-9": Footer9,
 };

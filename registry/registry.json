@@ -847,6 +847,34 @@
       "description": "Magazine-style blogpost — full-bleed cover image with gradient fade, floating header card (badge, title, author), drop-cap opening paragraph, full-width pull quote between paragraphs, related-posts card at the end.",
       "dependencies": [],
       "registryDependencies": ["badge"]
+    },
+    {
+      "name": "footer-6",
+      "title": "Footer 6",
+      "description": "Wordmark footer — compact sitemap (2-column links + socials) above a small bottom bar, then a massive low-contrast brand wordmark spanning the full width below. Bold typography focus.",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "footer-7",
+      "title": "Footer 7",
+      "description": "Developer-tool footer — status pill with pulsing dot, monospace version + region badges (with chevron), 3-column platform/devs/resources nav, small social row in the bottom bar.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": []
+    },
+    {
+      "name": "footer-8",
+      "title": "Footer 8",
+      "description": "Card-island footer — full footer content wrapped in a rounded-3xl card on a muted background. Left: badge + CTA headline + primary button; right: 3-column nav. Social row in the inner bottom bar.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"]
+    },
+    {
+      "name": "footer-9",
+      "title": "Footer 9",
+      "description": "Multi-office footer — brand + tagline + sales/press email definition list + socials on the left, 4-column office addresses grid (city, multi-line address, HQ pill) on the right.",
+      "dependencies": [],
+      "registryDependencies": []
     }
   ]
 }
