@@ -86,7 +86,7 @@ export default async function BlockPreviewPage({
                 <Lock className="size-4" /> Pro block — unlock the full library to
                 install and view the code.
               </p>
-              <Button size="sm" render={<Link href="/pricing">Unlock — $99</Link>} />
+              <Button size="sm" nativeButton={false} render={<Link href="/pricing">Unlock — $99</Link>} />
             </div>
           ) : (
             <div className="relative">
@@ -129,7 +129,7 @@ export default async function BlockPreviewPage({
                     The source for this pro block is locked. Get lifetime access to
                     every block with a single one-time purchase.
                   </p>
-                  <Button render={<Link href="/pricing">View pricing</Link>} />
+                  <Button nativeButton={false} render={<Link href="/pricing">View pricing</Link>} />
                 </div>
               </div>
             ) : (

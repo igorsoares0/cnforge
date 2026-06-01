@@ -19,16 +19,19 @@ export default async function SiteHeader() {
           <Button
             variant="ghost"
             size="sm"
+            nativeButton={false}
             render={<Link href="/pricing">Pricing</Link>}
           />
           {session?.user ? (
             <Button
               size="sm"
+              nativeButton={false}
               render={<Link href="/dashboard">Dashboard</Link>}
             />
           ) : (
             <Button
               size="sm"
+              nativeButton={false}
               render={<Link href="/login">Sign in</Link>}
             />
           )}

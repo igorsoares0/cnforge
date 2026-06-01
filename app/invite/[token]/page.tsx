@@ -32,6 +32,7 @@ export default async function InvitePage({
             </p>
             <Button
               className="mt-6"
+              nativeButton={false}
               render={<Link href="/">Back to home</Link>}
             />
           </>

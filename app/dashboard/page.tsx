@@ -46,7 +46,7 @@ export default async function DashboardPage() {
             purchase.
           </p>
           <div className="mt-4">
-            <Button render={<Link href="/pricing">View pricing</Link>} />
+            <Button nativeButton={false} render={<Link href="/pricing">View pricing</Link>} />
           </div>
         </div>
       )}

@@ -32,7 +32,7 @@ export default async function BillingPage() {
         <div className="mt-8 rounded-xl border border-border bg-muted p-5">
           <p className="text-sm">You haven&apos;t purchased a plan yet.</p>
           <div className="mt-4">
-            <Button render={<Link href="/pricing">See plans</Link>} />
+            <Button nativeButton={false} render={<Link href="/pricing">See plans</Link>} />
           </div>
         </div>
       ) : (
