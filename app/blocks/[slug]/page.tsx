@@ -1,9 +1,12 @@
+import { Lock } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { auth } from "@/auth";
 import BlockPreviewFrame from "@/components/block-preview-frame";
 import CodeBlock from "@/components/code-block";
 import CopyButton from "@/components/copy-button";
+import { Button } from "@/components/ui/button";
 import {
   Tabs,
   TabsContent,
@@ -12,7 +15,8 @@ import {
 } from "@/components/ui/tabs";
 import ThemeSwitcher from "@/components/theme-switcher";
 import { blockComponents } from "@/lib/blocks";
-import { loadBlockSource, loadRegistry } from "@/lib/registry";
+import { isEntitled } from "@/lib/entitlements";
+import { loadBlockSource, loadRegistry, tierOf } from "@/lib/registry";
 
 export async function generateStaticParams() {
   const registry = await loadRegistry();
@@ -42,6 +46,12 @@ export default async function BlockPreviewPage({
 
   const source = await loadBlockSource(slug);
 
+  const session = await auth();
+  const entitled = session?.user?.id
+    ? await isEntitled(session.user.id)
+    : false;
+  const locked = tierOf(block) === "pro" && !entitled;
+
   const command =
     theme === "default"
       ? `npx shadcn add @cnforge/${slug}`
@@ -70,14 +80,24 @@ export default async function BlockPreviewPage({
             </div>
             <ThemeSwitcher themes={registry.themes} active={theme} />
           </div>
-          <div className="relative">
-            <pre className="overflow-x-auto rounded-lg border border-border bg-muted px-4 py-3 pr-12 font-mono text-sm text-foreground">
-              <code>{command}</code>
-            </pre>
-            <div className="absolute right-2 top-1/2 -translate-y-1/2">
-              <CopyButton value={command} />
+          {locked ? (
+            <div className="flex flex-col gap-3 rounded-lg border border-border bg-muted px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Lock className="size-4" /> Pro block — unlock the full library to
+                install and view the code.
+              </p>
+              <Button size="sm" render={<Link href="/pricing">Unlock — $99</Link>} />
             </div>
-          </div>
+          ) : (
+            <div className="relative">
+              <pre className="overflow-x-auto rounded-lg border border-border bg-muted px-4 py-3 pr-12 font-mono text-sm text-foreground">
+                <code>{command}</code>
+              </pre>
+              <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                <CopyButton value={command} />
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -98,7 +118,23 @@ export default async function BlockPreviewPage({
             />
           </TabsContent>
           <TabsContent value="code">
-            <CodeBlock code={source} lang="tsx" />
+            {locked ? (
+              <div className="relative overflow-hidden rounded-lg border border-border">
+                <div className="pointer-events-none max-h-80 overflow-hidden opacity-30 blur-[3px]">
+                  <CodeBlock code={source} lang="tsx" />
+                </div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-background/40 px-6 text-center">
+                  <Lock className="size-6 text-muted-foreground" />
+                  <p className="max-w-sm text-sm text-muted-foreground">
+                    The source for this pro block is locked. Get lifetime access to
+                    every block with a single one-time purchase.
+                  </p>
+                  <Button render={<Link href="/pricing">View pricing</Link>} />
+                </div>
+              </div>
+            ) : (
+              <CodeBlock code={source} lang="tsx" />
+            )}
           </TabsContent>
         </Tabs>
       </div>

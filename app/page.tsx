@@ -3,6 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import BlockCatalog from "@/components/block-catalog";
+import SiteHeader from "@/components/site-header";
 import { loadRegistry } from "@/lib/registry";
 
 function getCategory(name: string): string {
@@ -27,6 +28,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-1 flex-col bg-background text-foreground">
+      <SiteHeader />
       {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 pb-16 pt-20 text-center sm:pb-20 sm:pt-28">

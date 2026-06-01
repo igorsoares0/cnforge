@@ -1,5 +1,6 @@
 "use client";
 
+import { Lock } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -7,6 +8,7 @@ type Block = {
   name: string;
   title?: string;
   description?: string;
+  tier?: "free" | "pro";
 };
 
 type BlockCatalogProps = {
@@ -74,8 +76,15 @@ export default function BlockCatalog({
               className="group flex flex-col gap-2.5 rounded-xl border border-border bg-card p-5 transition-colors hover:border-foreground/30"
             >
               <div className="flex items-center justify-between">
-                <span className="font-mono text-sm font-semibold text-foreground">
+                <span className="flex items-center gap-1.5 font-mono text-sm font-semibold text-foreground">
                   {block.name}
+                  {block.tier !== "free" ? (
+                    <Lock className="size-3 text-muted-foreground" />
+                  ) : (
+                    <span className="rounded-full bg-muted px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                      Free
+                    </span>
+                  )}
                 </span>
                 <span className="text-xs text-muted-foreground transition-colors group-hover:text-foreground">
                   Preview →

@@ -1,0 +1,176 @@
+// cnforge — auth + payments schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------------------------------------------------------------------------
+// Auth.js (NextAuth v5) — adapter models
+// ---------------------------------------------------------------------------
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String? // null for OAuth-only accounts
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts       Account[]
+  sessions       Session[]
+  purchases      Purchase[]
+  ownedTeams     Team[]               @relation("TeamOwner")
+  memberships    TeamMember[]
+  registryTokens RegistryToken[]
+  resetTokens    PasswordResetToken[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// Unused at runtime (JWT strategy) but required by the Prisma adapter.
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ---------------------------------------------------------------------------
+// Billing / entitlements
+// ---------------------------------------------------------------------------
+
+enum Plan {
+  individual
+  team
+}
+
+enum PurchaseStatus {
+  active
+  refunded
+}
+
+model Purchase {
+  id                  String         @id @default(cuid())
+  userId              String
+  plan                Plan
+  paddleTransactionId String         @unique
+  paddlePriceId       String?
+  amount              Int? // minor units (cents)
+  currency            String?
+  status              PurchaseStatus @default(active)
+  createdAt           DateTime       @default(now())
+
+  user User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  team Team?
+
+  @@index([userId])
+}
+
+model Team {
+  id         String   @id @default(cuid())
+  name       String
+  ownerId    String
+  purchaseId String   @unique
+  seatLimit  Int      @default(10)
+  createdAt  DateTime @default(now())
+
+  owner    User         @relation("TeamOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  purchase Purchase     @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
+  members  TeamMember[]
+  invites  TeamInvite[]
+}
+
+enum TeamRole {
+  owner
+  member
+}
+
+model TeamMember {
+  id       String   @id @default(cuid())
+  teamId   String
+  userId   String
+  role     TeamRole @default(member)
+  joinedAt DateTime @default(now())
+
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([teamId, userId])
+  @@index([userId])
+}
+
+enum InviteStatus {
+  pending
+  accepted
+  revoked
+}
+
+model TeamInvite {
+  id        String       @id @default(cuid())
+  teamId    String
+  email     String
+  token     String       @unique
+  status    InviteStatus @default(pending)
+  expiresAt DateTime
+  createdAt DateTime     @default(now())
+
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@index([teamId])
+  @@index([email])
+}
+
+// Personal access token for installing pro blocks via the shadcn CLI.
+model RegistryToken {
+  id         String    @id @default(cuid())
+  userId     String
+  tokenHash  String    @unique
+  lastFour   String
+  createdAt  DateTime  @default(now())
+  lastUsedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}

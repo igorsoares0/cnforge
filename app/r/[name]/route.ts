@@ -1,7 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-import { loadRegistry } from "@/lib/registry";
+import { isEntitled } from "@/lib/entitlements";
+import { loadRegistry, tierOf } from "@/lib/registry";
+import { resolveRegistryToken } from "@/lib/registry-token";
 
 type RegistryItemFile =
   | {
@@ -83,25 +85,58 @@ async function buildThemeItem(themeName: string): Promise<RegistryItem | null> {
   };
 }
 
+function jsonError(message: string, status: number) {
+  return new Response(JSON.stringify({ error: message }), {
+    status,
+    headers: { "content-type": "application/json" },
+  });
+}
+
+/** Returns true if the bearer token belongs to an entitled user. */
+async function isAuthorized(request: Request): Promise<boolean> {
+  const header = request.headers.get("authorization") ?? "";
+  const token = header.replace(/^Bearer\s+/i, "").trim();
+  if (!token) return false;
+  const userId = await resolveRegistryToken(token);
+  if (!userId) return false;
+  return isEntitled(userId);
+}
+
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ name: string }> },
 ) {
   const { name: raw } = await params;
   const name = raw.replace(/\.json$/, "");
 
-  const item = name.startsWith("theme-")
-    ? await buildThemeItem(name.slice("theme-".length))
-    : await buildBlockItem(name);
-
-  if (!item) {
-    return new Response(JSON.stringify({ error: `Not found: ${name}` }), {
-      status: 404,
-      headers: { "content-type": "application/json" },
+  // Themes are always free to install.
+  if (name.startsWith("theme-")) {
+    const theme = await buildThemeItem(name.slice("theme-".length));
+    if (!theme) return jsonError(`Not found: ${name}`, 404);
+    return Response.json(theme, {
+      headers: { "cache-control": "public, max-age=60, s-maxage=300" },
     });
   }
 
-  return Response.json(item, {
-    headers: { "cache-control": "public, max-age=60, s-maxage=300" },
-  });
+  const registry = await loadRegistry();
+  const block = registry.blocks.find((b) => b.name === name);
+  if (!block) return jsonError(`Not found: ${name}`, 404);
+
+  // Pro blocks require a valid registry token from an entitled user.
+  if (tierOf(block) === "pro" && !(await isAuthorized(request))) {
+    return jsonError(
+      `"${name}" is a pro block. Add your registry token to components.json, or unlock it at ${process.env.NEXT_PUBLIC_APP_URL ?? "https://cnforge.dev"}/pricing`,
+      401,
+    );
+  }
+
+  const item = await buildBlockItem(name);
+  if (!item) return jsonError(`Not found: ${name}`, 404);
+
+  // Per-user gated content must not be cached by shared caches.
+  const cacheControl =
+    tierOf(block) === "pro"
+      ? "private, no-store"
+      : "public, max-age=60, s-maxage=300";
+  return Response.json(item, { headers: { "cache-control": cacheControl } });
 }

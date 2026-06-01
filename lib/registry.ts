@@ -1,13 +1,21 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
+export type Tier = "free" | "pro";
+
 export type Block = {
   name: string;
   title?: string;
   description?: string;
   dependencies?: string[];
   registryDependencies?: string[];
+  tier?: Tier;
 };
+
+/** Blocks default to "pro" unless explicitly marked free. */
+export function tierOf(block: Pick<Block, "tier">): Tier {
+  return block.tier === "free" ? "free" : "pro";
+}
 
 export type Registry = {
   themes: string[];

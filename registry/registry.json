@@ -1,985 +1,1622 @@
 {
-  "themes": ["default", "3tchat", "noir", "solar", "midnight", "ocean", "rose", "forest"],
+  "themes": [
+    "default",
+    "3tchat",
+    "noir",
+    "solar",
+    "midnight",
+    "ocean",
+    "rose",
+    "forest"
+  ],
   "blocks": [
     {
       "name": "hero-1",
       "title": "Hero 1",
       "description": "Hero section with announcement card on the left and a 2x2 stats grid on the right (active builds · trusted by · deploys sparkline · testimonial). Same structure across themes.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "hero-2",
       "title": "Hero 2",
       "description": "Centered hero with announcement pill, large headline, dual CTAs and a six-logo trust strip. Single-column composition that scales from mobile to desktop.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "hero-3",
       "title": "Hero 3",
       "description": "Developer-flavored split hero — headline, dual CTAs and an avatar social-proof strip on the left, code-window mockup with traffic-light dots and a syntax-highlighted snippet on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-4",
       "title": "Hero 4",
       "description": "Image-led split hero — announcement pill, headline, subtitle, dual CTAs and avatar social proof on the left; product photo with a floating stat card (icon + value + caption) anchored bottom-right on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "about-1",
       "title": "About 1",
       "description": "Editorial about section — eyebrow + headline on the left, two-paragraph mission and CTA link on the right, anchored by a four-up stats strip below (founded · customers · countries · team).",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "about-2",
       "title": "About 2",
       "description": "Image-led split about — eyebrow, headline, mission paragraph, two inline stats and dual CTAs on the left; portrait team photo with a floating 'Est.' badge on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-1",
       "title": "Pricing 1",
       "description": "Three-tier pricing grid with centered header — Starter, Pro (featured with 'Most popular' badge and inverted card), Enterprise. Each tier shows price, period, description, primary CTA and a 5-item feature list with check icons.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "navbar-1",
       "title": "Navbar 1",
       "description": "Sticky top navigation — brand + version badge on the left, primary links in the middle (md+), secondary auth link and primary CTA on the right. Mobile collapses to brand + CTA only.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "footer-1",
       "title": "Footer 1",
       "description": "Multi-column footer — brand block with description and three social icons on the left (lg:col-span-2), three link columns on the right (product · company · resources). Bottom bar with copyright and legal links.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "free"
     },
     {
       "name": "features-1",
       "title": "Features 1",
       "description": "Centered eyebrow + headline + subtitle, followed by a 6-card grid of features (icon in muted square · title · description). Three columns on desktop, two on tablet, one on mobile. Six lucide icons available via the `icon` enum (zap, shield, code, layers, sparkles, chart).",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "cta-1",
       "title": "CTA 1",
       "description": "Centered call-to-action card with inverted primary background, subtle radial-gradient overlay, eyebrow pill, large headline, subtitle, and dual buttons (primary inverted + ghost). Designed to anchor the bottom of a landing page.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "faq-1",
       "title": "FAQ 1",
       "description": "Centered FAQ with eyebrow + title + subtitle followed by a vertical list of expandable items. Uses native <details>/<summary> — zero JS, fully accessible. Plus icon rotates 45° on open.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "testimonials-1",
       "title": "Testimonials 1",
       "description": "Three-column grid of 6 testimonial cards. Each card has a serif quote mark, the quote text, then a footer with colored avatar initials, author name and role. Grid collapses to two columns on tablet and one on mobile.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "logos-1",
       "title": "Logos 1",
       "description": "Standalone trust strip — caption on top, six logos (text) below in a 6/3/2 column grid. Logos fade on hover. Minimal section padding to slot between other blocks.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "free"
     },
     {
       "name": "hero-5",
       "title": "Hero 5",
       "description": "Waitlist/signup hero — centered announcement pill, headline, subtitle, then an email input + submit button form (works with form action — no client state). Trust note below the form and an avatar social-proof strip at the bottom.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-2",
       "title": "Features 2",
       "description": "Alternating split — three feature rows with image on one side and text on the other, flipping sides each row. Each row has eyebrow badge, heading, paragraph, checked bullet list, and an arrow link.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "pricing-2",
       "title": "Pricing 2",
       "description": "Two-tier pricing — Free vs Pro side-by-side (stacked on mobile). Pro card is inverted (bg-primary) with a 'Popular' pill. Same feature-list pattern as pricing-1 but trimmed for freemium/MVP positioning.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button", "badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "stats-1",
       "title": "Stats 1",
       "description": "Four-stat grid with icons — each stat in a bordered card with large number, label, and lucide icon. 2-col on mobile, 4-col on desktop. Ideal for social proof and trust metrics.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "team-1",
       "title": "Team 1",
       "description": "Team grid — 4 member cards with colored avatar initials, name, role, short bio, and social links (X, LinkedIn, GitHub via inline SVGs). 1-col mobile, 2-col tablet, 4-col desktop.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "how-it-works-1",
       "title": "How It Works 1",
       "description": "Three-step process — numbered circles with lucide icons, title, and description. Vertical connector line on desktop. Explains a product flow or onboarding sequence.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "free"
     },
     {
       "name": "contact-1",
       "title": "Contact 1",
       "description": "Split contact section — info column (title, subtitle, email/phone/address with icons) on the left, form card (name, email, subject, message, submit) on the right. Stacked on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "blog-1",
       "title": "Blog 1",
       "description": "Three-card blog grid — each card has a placeholder image area, colored category tag, title, excerpt, author avatar + name, date, and 'Read more' footer link. 1-col mobile, 2-col tablet, 3-col desktop.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "banner-1",
       "title": "Banner 1",
       "description": "Top announcement bar — full-width primary background with text, optional CTA link with arrow, and dismissible X button. Client component with useState for dismiss. Compact single-line height.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "free"
     },
     {
       "name": "navbar-2",
       "title": "Navbar 2",
       "description": "Centered navigation — logo left, links absolutely centered in the bar, search icon + auth link + primary CTA on the right. Same hamburger mobile menu as navbar-1. Optional search button.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-2",
       "title": "Footer 2",
       "description": "Minimal single-row footer — brand logo left, inline nav links centered, social icons right. Copyright in a slim bottom bar. Compact alternative to footer-1's multi-column layout.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "cta-2",
       "title": "CTA 2",
       "description": "Split CTA card — text column (eyebrow, headline, subtitle, check bullets, dual buttons) on the left, terminal mockup with CLI output on the right. Bordered card instead of inverted background.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "faq-2",
       "title": "FAQ 2",
       "description": "Categorized FAQ — category sidebar on the left (horizontal tabs on mobile), filtered accordion on the right. Client component with useState for active category. Same details/summary pattern as faq-1.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "testimonials-2",
       "title": "Testimonials 2",
       "description": "Featured single testimonial — large centered blockquote with serif opening mark, author avatar + name + role, and an optional metric card below. High-impact alternative to the testimonials-1 grid.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "logos-2",
       "title": "Logos 2",
       "description": "Infinite marquee logo strip — logos scroll horizontally in a continuous loop with CSS animation. Gradient fade on edges. Speed configurable via prop. No JS required for animation.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "stats-2",
       "title": "Stats 2",
       "description": "Inline stats strip — four metrics in a minimal horizontal row without cards. Top and bottom border. Compact section to slot between content blocks.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "banner-2",
       "title": "Banner 2",
       "description": "Split announcement bar — text on the left with success dot, CTA button on the right, dismiss X. Card background instead of primary. Client component with useState.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "blog-2",
       "title": "Blog 2",
       "description": "Featured + list blog layout — large featured card on the left with image placeholder, two horizontal cards stacked on the right. Category tags, author avatars, dates, and arrow links.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "contact-2",
       "title": "Contact 2",
       "description": "Centered contact form — eyebrow + title + subtitle on top, single card form below (first/last name, email, company, message, submit). Simpler alternative to contact-1's split layout.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "team-2",
       "title": "Team 2",
       "description": "Team list — horizontal rows instead of cards. Each row has avatar initials, name, role, and social links aligned right. Compact alternative to team-1's grid layout.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "how-it-works-2",
       "title": "How It Works 2",
       "description": "Vertical timeline — steps stacked vertically with a connector line, icon circles and numbered badges on the left, text on the right. Alternative to how-it-works-1's horizontal layout.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "changelog-1",
       "title": "Changelog 1",
       "description": "Release timeline — vertical list with version badges, dates, titles, and bullet-point changes. Connector line on the left. Ideal for product update pages.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "integrations-1",
       "title": "Integrations 1",
       "description": "Integration grid — 6 cards with logo initials, category tag, name, description, and 'Learn more' arrow link. Hover border highlight. 3-col desktop, 2-col tablet, 1-col mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "comparison-1",
       "title": "Comparison 1",
       "description": "Feature comparison table — us vs them with check/minus icons and text values. Zebra-striped rows in a rounded bordered container. Ideal for competitive positioning.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "gallery-1",
       "title": "Gallery 1",
       "description": "Screenshot gallery — 6-item grid with muted placeholder areas, initials, and optional captions. 3-col desktop, 2-col tablet, 1-col mobile. Designed for product screenshots.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "404-1",
       "title": "404 Page",
       "description": "Error page — large faded 404 code, headline, subtitle, and back-to-home CTA button with arrow. Vertically centered, min-height 80vh. Drop-in not-found page.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "login-1",
       "title": "Login 1",
       "description": "Auth page — centered card with brand icon, email/password form, social login buttons (GitHub + Google), forgot password link, and sign-up redirect. Vertically centered, min-height 80vh.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "pricing-3",
       "title": "Pricing 3",
       "description": "Three-tier pricing with monthly/annual toggle — Starter, Pro (featured with border-2 and 'Most popular' pill), Enterprise. Client component with useState for billing period. Save 20% badge on annual.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-6",
       "title": "Hero 6",
       "description": "Video/demo hero — centered headline + subtitle + dual CTAs above an aspect-video embed placeholder with play button overlay. Designed for product walkthroughs and demo videos.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "cta-3",
       "title": "CTA 3",
       "description": "Newsletter CTA — bordered card with headline, subtitle, inline email input + subscribe button, and trust note. Compact single-purpose conversion block.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "testimonials-3",
       "title": "Testimonials 3",
       "description": "Testimonial marquee — cards scroll horizontally in a continuous CSS animation loop with gradient edge fades. Configurable speed. No JS required for animation.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "features-3",
       "title": "Features 3",
       "description": "Bento grid — asymmetric feature layout with optional 'wide' span cards (col-span-2). Six features in a visually interesting grid instead of uniform columns.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-3",
       "title": "Footer 3",
       "description": "Newsletter footer — multi-column layout like footer-1 but with an email subscribe form in the brand column. Social icons + legal links in bottom bar.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "about-3",
       "title": "About 3",
       "description": "Company timeline — vertical milestone list with year circles, connector line, and cards for each milestone (year, title, description). Mobile-friendly with badge fallback.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "navbar-3",
       "title": "Navbar 3",
       "description": "Transparent overlay navbar — no background, no border, positioned absolute over hero content. Same link/CTA/mobile pattern but with transparent/frosted aesthetic for dark hero sections.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "faq-3",
       "title": "FAQ 3",
       "description": "Two-column FAQ — questions split evenly into left and right columns using native details/summary. Same accordion pattern as faq-1 but with better use of horizontal space on desktop.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "waitlist-1",
       "title": "Waitlist 1",
       "description": "Coming-soon waitlist page — centered brand icon, eyebrow badge, headline, subtitle, email input + join button, launch date pill, and three feature-teaser cards. Vertically centered min-height 80vh.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "careers-1",
       "title": "Careers 1",
       "description": "Job listings section — eyebrow + title + subtitle, then a vertical list of job cards with title, department badge (color-coded), location with pin icon, type, and apply button. Hover border highlight.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "cookie-banner-1",
       "title": "Cookie Banner 1",
       "description": "Fixed bottom cookie consent banner — message with learn-more link, accept and decline buttons. Client component with useState for dismiss. Responsive: stacked on mobile, inline on desktop.",
       "dependencies": [],
-      "registryDependencies": ["button"]
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "roadmap-1",
       "title": "Roadmap 1",
       "description": "Product roadmap timeline — vertical list with quarter badges, status indicators (completed/in-progress/planned), titles, descriptions, and bullet items. Connector line on desktop.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "logos-3",
       "title": "Logos 3",
       "description": "Logo card grid — 6 cards with colored initials icon, company name, and tagline. Hover border highlight. 3-col desktop, 2-col tablet, 1-col mobile. Richer alternative to logos-1 strip and logos-2 marquee.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "stats-3",
       "title": "Stats 3",
       "description": "Stats with progress bars — 4 metric cards with large value, label, animated progress bar, and description. Visual alternative to stats-1 icons and stats-2 inline strip.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "team-3",
       "title": "Team 3",
       "description": "Team card grid — large cards with avatar placeholder area, name, role, extended bio, and social links in a footer divider. 4-col desktop, 2-col tablet, 1-col mobile.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "contact-3",
       "title": "Contact 3",
       "description": "Contact with office info — split layout with email/phone/address cards and office hours on the left, map placeholder on the right. No form, focused on location and availability.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-7",
       "title": "Hero 7",
       "description": "Product showcase hero — centered headline + dual CTAs + star rating strip, with a browser-chrome mockup below featuring sidebar navigation and block category grid. Dashboard preview aesthetic.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-4",
       "title": "Pricing 4",
       "description": "Feature comparison table — three plan columns with price, CTA, and grouped feature rows using check/minus/text values. Zebra-style category headers. Horizontally scrollable on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "contact-4",
       "title": "Contact 4",
       "description": "Multi-office contact — three office location cards with city initials, address, email, phone, plus a bottom CTA banner. No form, focused on global presence.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-4",
       "title": "Footer 4",
       "description": "CTA footer — centered call-to-action section on top (title + subtitle + button), brand + social icons and three link columns below, copyright bar at the bottom.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-8",
       "title": "Hero 8",
       "description": "Split hero with testimonial — headline, subtitle, dual CTAs, and avatar social-proof strip on the left; large testimonial card with quote, author avatar, and attribution on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "login-2",
       "title": "Login 2",
       "description": "Split login — full-height primary-colored branding panel with testimonial on the left (hidden on mobile), sign-in form with social buttons + email/password on the right.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "login-3",
       "title": "Login 3",
       "description": "Sign-up form — centered card with brand icon, social buttons (GitHub + Google), first/last name, email, password fields, TOS/privacy links, and sign-in redirect. Registration counterpart to login-1.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "dashboard-1",
       "title": "Dashboard 1",
       "description": "Analytics dashboard — four metric cards with sparkline charts and trend deltas, large revenue-over-time area chart, and a recent activity feed with avatars. App-style overview block.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "onboarding-1",
       "title": "Onboarding 1",
       "description": "Onboarding stepper — progress bar with step count, numbered step cards with completed/current/upcoming states, check icon for done steps, back/continue navigation buttons.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "settings-1",
       "title": "Settings 1",
       "description": "Account settings page — sidebar navigation (horizontal tabs on mobile), profile form (name/email/bio), notification toggles with descriptions, billing section with current plan badge and action buttons.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "notification-1",
       "title": "Notification 1",
       "description": "Notification feed — unread count badge, list of notification items with type icons (info/success/warning), timestamps, read/unread indicator dots, and mark-all-as-read action.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "changelog-2",
       "title": "Changelog 2",
       "description": "Card-based release notes — each release in its own bordered card with version pill, type badge (feature/fix/improvement), date, title, and bullet changes. No timeline, cleaner for long changelogs.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "integrations-2",
       "title": "Integrations 2",
       "description": "Categorized integration list — grouped by category with section headers, each integration as a compact row with icon, name, description, and connect/connected status. Management-style layout.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "comparison-2",
       "title": "Comparison 2",
       "description": "Side-by-side comparison cards — two large cards (us vs others) with feature checklists using check/minus icons. Primary border highlight on 'us' card. No table, fully mobile-friendly.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "gallery-2",
       "title": "Gallery 2",
       "description": "Masonry gallery — CSS columns layout with alternating tall/short image placeholders. Organic, Pinterest-style grid instead of uniform rows. Responsive 1→2→3 columns.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "dashboard-2",
       "title": "Dashboard 2",
       "description": "Workspace dashboard — three top metric cards, then two-column layout with task list (status badges, assignee avatars) and project progress bars. Team-oriented alternative to dashboard-1.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "notification-2",
       "title": "Notification 2",
       "description": "Grouped notification feed — centered layout with notifications grouped by date (today/yesterday/this week), colored type dots, unread count badge, compact single-line items.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "blogpost-1",
       "title": "Blogpost 1",
       "description": "Classic article layout — back link, category badge, large title, author header with avatar, cover image placeholder, prose body with headings, code block, blockquote, tag pills, and author bio footer card.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "blogpost-2",
       "title": "Blogpost 2",
       "description": "Magazine article with sidebar — large title, full-width cover, sticky table of contents and share buttons on the left (hidden on mobile), prose body with code snippets and blockquotes on the right.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-9",
       "title": "Hero 9",
       "description": "Live activity hero — headline and dual CTAs on the left, stacked live event cards with avatars and animated pulse dots on the right. Social proof through real-time activity feed.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-10",
       "title": "Hero 10",
       "description": "Typographic hero — oversized two-tone headline (foreground + primary accent line), single large CTA button, and a full-width stats strip with dividers below. Minimal, no cards or mockups.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-11",
       "title": "Hero 11",
       "description": "Image-first split hero — headline, subtitle, dual CTAs and logo trust strip on the left; product image (or placeholder with camera icon) with rounded border, shadow, and floating stat card anchored bottom-left on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "404-2",
       "title": "404 Page 2",
       "description": "Illustrated 404 — code badge in a rounded square, headline, subtitle, search bar with icon, popular pages link grid (2-col), and back-to-home CTA. Helps users find their way.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "waitlist-2",
       "title": "Waitlist 2",
       "description": "Split waitlist — primary-colored branding panel with testimonial and feature list on the left (hidden on mobile), email form with spots-remaining progress bar on the right. Urgency-driven.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "onboarding-2",
       "title": "Onboarding 2",
       "description": "Horizontal checklist — 5 step cards in a row (responsive grid) with numbered circles, completed/current/upcoming states, and a centered continue button. Compact alternative to onboarding-1 vertical stepper.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "careers-2",
       "title": "Careers 2",
       "description": "Department grid — cards per department with colored icon, name, open role count, description, and 'View roles' link. Total roles summary and browse-all CTA at the bottom.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "settings-2",
       "title": "Settings 2",
       "description": "Tab-based settings — horizontal underline tabs (General/Security/API keys/Danger zone), profile section with avatar, API keys list with revoke actions, and red danger zone card with delete button.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "cookie-banner-2",
       "title": "Cookie Banner 2",
       "description": "Toast-style cookie consent — fixed bottom-right card with per-category toggles (essential/analytics/marketing), accept all, reject all, and save preferences buttons. Client component.",
       "dependencies": [],
-      "registryDependencies": ["button"]
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "roadmap-2",
       "title": "Roadmap 2",
       "description": "Kanban roadmap — three columns (Planned/In Progress/Done) with feature cards, status-colored headers, and optional quarter tags. Board-style alternative to roadmap-1 timeline.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "empty-state-1",
       "title": "Empty State 1",
       "description": "Empty state placeholder — dashed-border icon box, headline, description, and dual CTAs (primary action + learn more). For when there's no data to display yet.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "profile-1",
       "title": "Profile 1",
       "description": "Public profile page — large avatar with initials, name, handle, role badge, bio, edit CTA, four-stat grid, and achievement badges section with colored pills.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "payment-1",
       "title": "Payment 1",
       "description": "Checkout form — card details and billing address sections on the left, sticky order summary with line items, tax, total, and pay button on the right. Responsive single-column on mobile.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "signup-1",
       "title": "Signup 1",
       "description": "Split signup — feature checklist with brand on the left (hidden on mobile), registration form with social buttons (GitHub/Google), name, email, password, TOS links on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "free"
     },
     {
       "name": "signup-2",
       "title": "Signup 2",
       "description": "Plan-selection signup — radio card plan picker (Free/Pro) at the top, then social buttons and email/password form below. Combines plan choice with account creation in a single flow.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "forgot-password-1",
       "title": "Forgot Password 1",
       "description": "Password reset form — centered card with brand icon, title, email input, submit button, and back-to-login link. Minimal single-purpose auth flow.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "maintenance-1",
       "title": "Maintenance 1",
       "description": "Maintenance page — centered layout with brand icon, animated status badge, progress bar, task checklist with done/in-progress/pending states, ETA, and status page link.",
       "dependencies": [],
-      "registryDependencies": ["button"]
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-5",
       "title": "Pricing 5",
       "description": "Toggle pricing — three-tier grid with monthly/annual billing switch showing different prices. Annual shows crossed-out monthly price and save badge. Most popular tier highlighted.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "how-it-works-3",
       "title": "How It Works 3",
       "description": "Numbered card grid — four large cards with colored number icons, titles, and descriptions. 4-col desktop, 2-col tablet, 1-col mobile. Visual alternative to icon-based and timeline variants.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "banner-3",
       "title": "Banner 3",
       "description": "Gradient app banner — subtle primary gradient background, badge pill, text, inline CTA link, and dismiss X button. Client component. Softer alternative to solid-color banner-1.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "blog-3",
       "title": "Blog 3",
       "description": "Newsletter-style blog list — vertical list with date column and title+excerpt, no images or cards. Compact, content-focused alternative to card-based blog-1 and featured blog-2.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "sidebar-1",
       "title": "Sidebar 1",
       "description": "App sidebar navigation — brand header, icon nav items with optional badges, collapsible sections with titles, and user avatar with name/email and sign-out button in the footer.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "contact-5",
       "title": "Contact 5",
       "description": "Minimal contact form — centered layout with just name, email, and message fields plus submit button. No sidebar info, no map, no extras. The cleanest contact block.",
       "dependencies": [],
-      "registryDependencies": ["badge", "button"]
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-4",
       "title": "Features 4",
       "description": "Bento-grid features section — one large highlight card (2-col span with icon, stat counter) paired with four smaller feature cards. Asymmetric layout that scales from stacked mobile to 3-col desktop.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "testimonials-4",
       "title": "Testimonials 4",
       "description": "Masonry testimonial grid with star ratings — centered header (eyebrow + title), then a CSS-columns masonry layout of quote cards. Each card has 5-star rating, quote, and author info with avatar and company.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "faq-4",
       "title": "FAQ 4",
       "description": "Category-grouped FAQ — centered header, then questions grouped by category with sticky category labels on the left and accordion items on the right. Clean two-column layout on desktop, stacked on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "cta-4",
       "title": "CTA 4",
       "description": "Full-width CTA card with gradient overlay — large rounded container with subtle primary gradient, sparkle badge, bold headline, dual CTAs, and a stat strip with dividers. Eye-catching conversion section.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-5",
       "title": "Footer 5",
       "description": "Mega footer with newsletter — top section splits brand info + social links (left) and email subscription form (right). Below, a 4-column sitemap grid. Bottom bar with copyright and legal links.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-12",
       "title": "Hero 12",
       "description": "Full-bleed background image hero — optional image behind a semi-transparent overlay with gradient fade. Centered content: announcement badge, large headline, subtitle, dual CTAs, and trust logo strip. Falls back to muted background when no image is provided.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "navbar-4",
       "title": "Navbar 4",
       "description": "Mega navbar with dropdown — Products link reveals a 2-column dropdown panel with icons, titles, and descriptions. Desktop hover-open, mobile accordion with grouped items. Full responsive hamburger menu.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "stats-4",
       "title": "Stats 4",
       "description": "Stats with icons and trend indicators — 4-card grid, each with icon, large value, label, trend badge (up/down with colored pill), and change description. Different from progress-bar style of stats-3.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "team-4",
       "title": "Team 4",
       "description": "Split-layout team section — sticky header (eyebrow + title + subtitle) on the left, 2-column card grid on the right. Each card has avatar, name, role, extended bio, and social links. Hover border effect.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "sidebar-2",
       "title": "Sidebar 2",
       "description": "Collapsible sidebar with search and notifications — brand + bell icon with badge count at top, search input, user avatar section, then collapsible nav sections with chevron toggles. Sign out button at bottom.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "login-4",
       "title": "Login 4",
       "description": "Split-screen login — left panel with brand, headline, subtitle, and testimonial quote card; right side with social buttons, divider, email/password form. Panel hidden on mobile, form takes full width.",
       "dependencies": [],
-      "registryDependencies": ["button"]
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "login-5",
       "title": "Login 5",
       "description": "Magic link login — centered layout with brand icon, full-width social buttons (GitHub, Google), then a single email field with mail icon and 'Send magic link' CTA. No password field. Ultra-minimal.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "signup-3",
       "title": "Signup 3",
       "description": "Card-based signup — everything inside a rounded card with brand, title, inline feature badges (check icons), social buttons, divider, first/last name + email + password form, and legal links.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "signup-4",
       "title": "Signup 4",
       "description": "Split-screen signup — left panel with brand, headline, stat counters, and avatar social proof strip; right side with social buttons, divider, name + email + password form. Panel hidden on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "testimonials-5",
       "title": "Testimonials 5",
       "description": "Featured testimonial layout — one large hero quote card (big quote mark, extended text, large avatar) centered at the top, plus a 3-column row of smaller quote cards below. Best for highlighting a key customer story.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "dashboard-3",
       "title": "Dashboard 3",
       "description": "Analytics dashboard — 4 metric cards, segmented range selector (24h/7d/30d/90d), bar chart of sessions by day, donut chart of traffic sources with legend, top-pages table (stacked cards on mobile).",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "gallery-3",
       "title": "Gallery 3",
       "description": "Showcase gallery — one large featured image on the left (with floating tag badge and gradient caption overlay) plus a 2-column thumbnail strip on the right. Hero-style layout for highlighting a primary screenshot.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "comparison-3",
       "title": "Comparison 3",
       "description": "3-tier comparison matrix — Free/Pro/Studio columns with one highlighted, header CTAs, alternating-row feature table (checkmarks, dashes, or text values). Stacks to per-tier cards on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "about-4",
       "title": "About 4",
       "description": "Manifesto-style about — centered big quote (font-serif quote mark + large headline) at top with attribution, then a 2-column values grid with icon cards (compass/wrench/sparkles/heart).",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "how-it-works-4",
       "title": "How it works 4",
       "description": "Zigzag steps with code previews — each step alternates left/right with a code/terminal snippet card (filename header + 3 traffic-light dots) on one side and numbered description on the other.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "blogpost-3",
       "title": "Blogpost 3",
       "description": "Magazine-style blogpost — full-bleed cover image with gradient fade, floating header card (badge, title, author), drop-cap opening paragraph, full-width pull quote between paragraphs, related-posts card at the end.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-6",
       "title": "Footer 6",
       "description": "Wordmark footer — compact sitemap (2-column links + socials) above a small bottom bar, then a massive low-contrast brand wordmark spanning the full width below. Bold typography focus.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "footer-7",
       "title": "Footer 7",
       "description": "Developer-tool footer — status pill with pulsing dot, monospace version + region badges (with chevron), 3-column platform/devs/resources nav, small social row in the bottom bar.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": []
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "footer-8",
       "title": "Footer 8",
       "description": "Card-island footer — full footer content wrapped in a rounded-3xl card on a muted background. Left: badge + CTA headline + primary button; right: 3-column nav. Social row in the inner bottom bar.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "footer-9",
       "title": "Footer 9",
       "description": "Multi-office footer — brand + tagline + sales/press email definition list + socials on the left, 4-column office addresses grid (city, multi-line address, HQ pill) on the right.",
       "dependencies": [],
-      "registryDependencies": []
+      "registryDependencies": [],
+      "tier": "pro"
     },
     {
       "name": "features-5",
       "title": "Features 5",
       "description": "Editorial numbered feature list — left-aligned 2-col layout (large 01/02/03 numbers + eyebrow + title + paragraph + optional inline link). Magazine feel, no icons, big typography.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-6",
       "title": "Features 6",
       "description": "Tabbed feature switcher (use client) — vertical tab rail on the left (icon + label) and a content panel on the right showing the active tab's title, description, bullets, and a code/terminal preview card.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-7",
       "title": "Features 7",
       "description": "Before/after pairs — table-style grid with a 'Before' column (struck-through muted text) and 'After' column (highlighted), separated by an arrow. Stacks to per-pair cards on mobile.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-8",
       "title": "Features 8",
       "description": "Stat-driven feature cards — 2-column grid where each card leads with a massive number (with optional unit suffix), then title + description below. Best for highlighting concrete metrics.",
       "dependencies": [],
-      "registryDependencies": ["badge"]
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "features-9",
       "title": "Features 9",
       "description": "Compact icon checklist — dense 2-3 column grid of small icon + label pairs (18 items), each row separated by a thin border. Best for 'everything you get' inventory sections.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-6",
       "title": "Pricing 6",
       "description": "Single-plan all-inclusive card — one big centered card with badge, strikethrough compare price + massive price, CTA + secondary link, guarantee line, 2-column feature checklist. Best for lifetime/one-time offers.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-7",
       "title": "Pricing 7",
       "description": "Compact 4-tier grid — Hobby/Starter/Team/Business in 4 columns, smaller and denser than typical 3-tier layouts. Featured tier with 2px primary border and floating Popular pill.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-8",
       "title": "Pricing 8",
       "description": "Base plan + add-ons — primary plan card on the left (Pro tier with feature checklist) and a stacked list of optional add-ons on the right (custom theme, priority support, Figma files, bespoke blocks).",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-9",
       "title": "Pricing 9",
       "description": "Persona switcher (use client) — 3 persona cards at top (Solo/Team/Enterprise with icons + taglines) that swap the entire plan set below. Each persona has its own 2-plan layout.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "pricing-10",
       "title": "Pricing 10",
       "description": "Usage-based tiers table — rows of usage ranges (10k/100k/1M/10M+) with per-unit rates, one row highlighted as 'sweet spot'. Below: included-everywhere checklist card with CTAs.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-13",
       "title": "Hero 13",
       "description": "Developer-focused hero — split 2-col with eyebrow + headline + copy + inline install command pill + CTAs on the left, and a code editor card (traffic-light header + filename + multi-line TSX sample) on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-14",
       "title": "Hero 14",
       "description": "Dashboard preview hero — centered headline + CTAs at the top, followed by a large faux-browser card (chrome + URL pill + sidebar nav + KPI cards + revenue chart) anchoring the section.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-15",
       "title": "Hero 15",
       "description": "Marquee hero — centered eyebrow/title/CTAs at the top, then an infinite-scroll CSS marquee strip of brand wordmarks (with edge fades and prefers-reduced-motion fallback) below the headline.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-16",
       "title": "Hero 16",
       "description": "Big-stat focal hero — split layout with a massive number (text-[10rem]) + trend pill + caption on the left, headline + paragraph + 3-row proof list + CTAs on the right.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     },
     {
       "name": "hero-17",
       "title": "Hero 17",
       "description": "Floating screenshot cards hero — centered headline and CTAs with 4 rotated mock cards absolutely positioned around the text on desktop; on mobile they collapse into a 2x2 grid below the content.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["badge", "button"]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "tier": "pro"
     }
   ]
 }
