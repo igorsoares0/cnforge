@@ -51,15 +51,21 @@ Um **shadcn registry** que permite:
 * Registry HTTP no schema oficial shadcn (`registry:block`, `registry:file`)
 * Múltiplos themes (paletas) instaláveis separadamente
 * Showcase web com Preview/Code, viewport switcher e copy do snippet de install
+* **Tiers de bloco** (`free` / `pro`) — blocos pro exigem entitlement (ver §17)
+* **Autenticação** (Auth.js v5 — Google OAuth + e-mail/senha com verificação)
+* **Pagamentos** (Paddle Billing) com planos `individual` e `team`
+* **Registry tokens** pessoais para instalar blocos pro via shadcn CLI (ver §18)
+* **Times** com convites por e-mail e acesso compartilhado por assento
+* **Dashboard** do usuário (billing, registry token, time)
 
 ---
 
 ## ❌ Fora do escopo (por enquanto)
 
 * Editor visual (builder)
-* Marketplace de blocos
-* Sistema de autenticação
-* Versionamento avançado
+* Marketplace de blocos (compra/venda por terceiros)
+* Versionamento avançado de blocos
+* Assinaturas recorrentes (o modelo atual é compra única / one-time)
 
 ---
 
@@ -69,9 +75,15 @@ Um **shadcn registry** que permite:
 
 ```
 [ Projeto consumidor ]
-  └─ npx shadcn add @cnforge/<name>
+  └─ npx shadcn add @cnforge/<name>   (+ Authorization: Bearer cnf_… para blocos pro)
        └─ GET https://cnforge.dev/r/<name>
-            └─ [ Next route handler ] → [ Registry (JSON + TSX/CSS files) ]
+            └─ [ Next route handler ]
+                 ├─ free / theme → serve registry-item (cache público)
+                 └─ pro → resolve token → entitlement (Prisma/Neon)
+                          ├─ ok    → serve registry-item (no-store)
+                          └─ falha → 401 (aponta pra /pricing)
+
+[ Showcase + Dashboard ]  Auth.js (Google + e-mail/senha) · Paddle (checkout/webhook) · Resend (e-mails)
 ```
 
 ---
@@ -102,7 +114,7 @@ registry/
 
 O endpoint HTTP fica em `app/r/[name]/route.ts` e serve cada item no schema `registry-item.json` do shadcn.
 
-Estado atual: 140 blocos × 8 themes (`default`, `3tchat`, `noir`, `solar`, `midnight`, `ocean`, `rose`, `forest`).
+Estado atual: 140 blocos × 8 themes (`default`, `3tchat`, `noir`, `solar`, `midnight`, `ocean`, `rose`, `forest`). Dos 140 blocos, **21 são `free`** (instaláveis sem login) e **119 são `pro`** (exigem registry token de usuário com entitlement ativo — ver §17/§18).
 
 Categorias: hero (17), about (4), pricing (10), features (9), navbar (4), footer (9), cta (4), faq (4), testimonials (5), logos (3), stats (4), team (4), how-it-works (4), contact (5), blog (3), blogpost (3), banner (3), changelog (2), integrations (2), comparison (3), gallery (3), 404 (2), login (5), waitlist (2), careers (2), cookie-banner (2), roadmap (2), dashboard (3), onboarding (2), settings (2), notification (2), empty-state (1), profile (1), payment (1), signup (4), forgot-password (1), maintenance (1), sidebar (2).
 
@@ -126,6 +138,8 @@ Cada bloco DEVE:
 * usar Tailwind CSS
 * declarar `dependencies` (pacotes npm) e `registryDependencies` (shadcn primitives) em `registry.json`
 * **ser responsivo** (ver §5.4)
+
+O campo opcional `tier` em cada entry do `registry.json` define a monetização: `"free"` torna o bloco instalável publicamente; ausente ou `"pro"` exige entitlement. O default seguro é **pro** (`tierOf()` em `lib/registry.ts`: um bloco só é free quando explicitamente `tier: "free"`).
 
 Cores hard-coded permitidas em casos universais não-temáticos: avatares de demonstração (`bg-emerald-500`, etc.), traffic-lights de janela de código (`bg-red-400/amber-400/emerald-400`).
 
@@ -162,6 +176,21 @@ Adicione ao `components.json` do projeto:
   }
 }
 ```
+
+Para instalar blocos **pro**, o consumidor anexa seu registry token (gerado no dashboard) como bearer no header — formato suportado pela shadcn CLI:
+
+```json id="2c8r5n-pro"
+{
+  "registries": {
+    "@cnforge": {
+      "url": "https://cnforge.dev/r/{name}",
+      "headers": { "Authorization": "Bearer ${CNFORGE_TOKEN}" }
+    }
+  }
+}
+```
+
+Blocos `free` e todos os themes não exigem token.
 
 ## 6.3 Comandos
 
@@ -376,7 +405,13 @@ O próprio Next.js do repo serve como vitrine pública dos blocos e como caminho
 * `/` — landing: nome, snippet de install, lista de blocos do registry, lista de themes.
 * `/blocks/[slug]` — página de detalhe do bloco, com tabs **Preview** ↔ **Code**.
 * `/blocks/[slug]/preview` — rota bare-bones (só o componente envolvido na classe `.theme-<name>`) usada como `src` do iframe de preview.
-* `/r/[name]` — endpoint do registry shadcn-compatible.
+* `/r/[name]` — endpoint do registry shadcn-compatible (gating de blocos pro — ver §18).
+* `/pricing` — planos `individual` e `team`, com checkout Paddle.
+* `/login`, `/signup`, `/forgot-password`, `/reset-password`, `/verify-email` — fluxo de autenticação (route group `(auth)`).
+* `/dashboard` — área logada; sub-rotas `billing`, `registry-token`, `team`. Protegida pelo `proxy.ts` (matcher `/dashboard/:path*`).
+* `/invite/[token]` — aceite de convite de time.
+* `/api/auth/[...nextauth]` — handlers do Auth.js.
+* `/api/paddle/webhook` — recebe eventos do Paddle (fulfillment / refund).
 
 ## 16.2 Funcionalidades da página de bloco
 
@@ -389,6 +424,73 @@ O próprio Next.js do repo serve como vitrine pública dos blocos e como caminho
 ## 16.3 Princípio
 
 A página de bloco serve dois objetivos: (1) **showcase** para validar visualmente blocos e themes, (2) **install path** alternativo via copy-paste do código exato que a CLI gravaria — os dois caminhos sempre entregam o mesmo arquivo.
+
+---
+
+# 🔐 17. Autenticação & Pagamentos
+
+A camada comercial transforma o cnforge num registry com blocos **free** (públicos) e **pro** (atrás de paywall). Stack: **Auth.js v5 + Prisma 7 + Neon (Postgres) + Resend (e-mail) + Paddle Billing**.
+
+## 17.1 Autenticação
+
+* **Auth.js v5 (NextAuth)** com **estratégia JWT** de sessão (`session.strategy = "jwt"`), exigida pelo provider Credentials.
+* Providers: **Google OAuth** e **Credentials** (e-mail + senha com `bcryptjs`).
+* Config dividida em dois arquivos por causa do edge runtime:
+  * `auth.config.ts` — base **edge-safe** (sem Prisma/bcrypt), usada pelo `proxy.ts` (middleware do Next 16, renomeado de `middleware` → `proxy`). Contém o callback `authorized` que protege `/dashboard`.
+  * `auth.ts` — adiciona `PrismaAdapter` + provider Credentials (precisa de APIs Node).
+* **Verificação de e-mail obrigatória**: login por Credentials retorna `null` enquanto `emailVerified` for nulo (não vaza qual fator falhou; a página de login oferece "reenviar verificação").
+* **E-mails transacionais via Resend** (`lib/email.ts`): verificação, reset de senha e convite de time. Todos com `idempotencyKey`.
+* **Reset de senha**: modelo `PasswordResetToken` (expira em 1h).
+
+## 17.2 Modelo de dados (Prisma)
+
+* **Auth.js**: `User` (com `passwordHash` opcional — null para contas OAuth-only), `Account`, `Session` (não usada em runtime com JWT, mas exigida pelo adapter), `VerificationToken`.
+* **Billing**: `Purchase` (1 por transação Paddle; `plan`, `status` = `active|refunded`, `paddleTransactionId` único para idempotência).
+* **Times**: `Team` (1:1 com a `Purchase` do plano team, `seatLimit` default 10), `TeamMember` (roles `owner|member`), `TeamInvite` (status `pending|accepted|revoked`, token único, expira).
+* **Registry tokens**: `RegistryToken` (ver §18).
+
+## 17.3 Planos & Pagamentos (Paddle)
+
+* Dois planos (`Plan` enum): **`individual`** e **`team`**. Modelo de compra **one-time** (não recorrente).
+* `lib/paddle.ts` mapeia Paddle price id → plano (`planForPrice`); Paddle SDK construído lazy, ambiente sandbox/production por env.
+* **Webhook** (`/api/paddle/webhook`): verifica assinatura com o **raw body** + `PADDLE_WEBHOOK_SECRET`.
+  * `transaction.completed` → `fulfillTransaction`: cria a `Purchase` (idempotente por `paddleTransactionId`); se plano = `team`, cria `Team` + `TeamMember` owner. O `userId` vem do `customData` da transação.
+  * `adjustment.created` / `adjustment.updated` com `status: "approved"` e `action` `refund`/`chargeback` → `revokeForAdjustment`: marca a `Purchase` como `refunded`. (Paddle Billing não emite `transaction.refunded`; refunds chegam como adjustments.)
+
+## 17.4 Entitlements (`lib/entitlements.ts`)
+
+`getAccess(userId)` retorna acesso pro se o usuário tem uma `Purchase` `individual` ativa **ou** é membro de um time cuja purchase está ativa. Como o gating só conta purchases `active`, marcar uma purchase como `refunded` revoga o acesso do comprador **e** de todos os membros do time de uma vez. `isEntitled(userId)` é o atalho booleano usado pelo endpoint do registry.
+
+---
+
+# 🎟️ 18. Registry Tokens & Gating de blocos pro
+
+## 18.1 Tokens
+
+* `RegistryToken` é um **PAT** (personal access token) para autenticar a shadcn CLI ao instalar blocos pro.
+* `lib/registry-token.ts`:
+  * Formato: prefixo `cnf_` + 24 bytes aleatórios (base64url).
+  * Persiste **apenas o hash SHA-256** (token de alta entropia ⇒ hash rápido é seguro e indexável); o plaintext é mostrado **uma única vez** na criação.
+  * `createRegistryToken` substitui qualquer token existente do usuário (transação delete+create) — um token ativo por usuário.
+  * `resolveRegistryToken` → `userId` (ou null); atualiza `lastUsedAt` em best-effort sem bloquear a resposta.
+* Gerenciado em `/dashboard/registry-token`.
+
+## 18.2 Gating no endpoint `/r/[name]`
+
+Ordem de avaliação no route handler:
+
+1. **Themes** (`theme-*`) → sempre livres.
+2. Bloco inexistente → `404`.
+3. Bloco **`pro`** sem autorização → `401` com mensagem instruindo a adicionar o token ou comprar em `/pricing`.
+4. Caso contrário → serve o `registry-item` JSON.
+
+Autorização (`isAuthorized`): extrai o bearer do header `Authorization`, resolve via `resolveRegistryToken`, e confirma `isEntitled`.
+
+**Cache**: blocos free e themes usam `public, max-age=60, s-maxage=300`; blocos pro usam **`private, no-store`** (conteúdo gated por usuário não pode entrar em cache compartilhado).
+
+## 18.3 CLI própria — descontinuada
+
+`cli/cnforge.mjs` agora só imprime um aviso de deprecação: o cnforge é distribuído **exclusivamente** como shadcn registry, consumido pela CLI oficial. Não há ferramenta própria (mantém RNF-01).
 
 ---
 
