@@ -24,13 +24,49 @@ export async function POST(request: Request) {
     await fulfillTransaction(event.data);
   }
 
+  // Refunds/chargebacks in Paddle Billing arrive as adjustments against the
+  // original transaction — there is no `transaction.refunded` event. An
+  // adjustment can be created already approved, or move to approved later, so
+  // we react to both events and let the handler filter by status.
+  if (
+    event.eventType === EventName.AdjustmentCreated ||
+    event.eventType === EventName.AdjustmentUpdated
+  ) {
+    await revokeForAdjustment(event.data);
+  }
+
   return new Response("ok", { status: 200 });
 }
 
+type Unmarshalled = Awaited<
+  ReturnType<ReturnType<typeof getPaddle>["webhooks"]["unmarshal"]>
+>;
+
 type TransactionData = Extract<
-  Awaited<ReturnType<ReturnType<typeof getPaddle>["webhooks"]["unmarshal"]>>,
+  Unmarshalled,
   { eventType: EventName.TransactionCompleted }
 >["data"];
+
+type AdjustmentData = Extract<
+  Unmarshalled,
+  { eventType: EventName.AdjustmentCreated | EventName.AdjustmentUpdated }
+>["data"];
+
+/**
+ * Revoke access when a refund or chargeback is approved. Marking the backing
+ * Purchase as `refunded` is enough: `getAccess` only counts active purchases,
+ * so both the buyer (individual) and any team members lose access at once.
+ * The `status: "active"` guard makes this idempotent across repeat deliveries.
+ */
+async function revokeForAdjustment(adj: AdjustmentData) {
+  if (adj.status !== "approved") return;
+  if (adj.action !== "refund" && adj.action !== "chargeback") return;
+
+  await db.purchase.updateMany({
+    where: { paddleTransactionId: adj.transactionId, status: "active" },
+    data: { status: "refunded" },
+  });
+}
 
 async function fulfillTransaction(tx: TransactionData) {
   // Idempotency: each transaction id is fulfilled at most once.
