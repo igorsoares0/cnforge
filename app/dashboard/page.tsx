@@ -3,10 +3,15 @@ import Link from "next/link";
 import { auth } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { getAccess } from "@/lib/entitlements";
+import { claimPendingInvites } from "@/lib/team";
 
 export default async function DashboardPage() {
   const session = await auth();
   const userId = session!.user.id;
+  // Settle any team invite addressed to this user before reading access, so an
+  // invitee who signed up via email/password (losing the invite callbackUrl)
+  // still lands here as an entitled team member.
+  await claimPendingInvites(userId);
   const access = await getAccess(userId);
 
   const planLabel = !access.entitled

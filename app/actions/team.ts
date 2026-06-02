@@ -150,7 +150,10 @@ export async function acceptInvite(token: string): Promise<TeamActionState> {
     return { success: "You're already on this team." };
   }
 
-  if (usedSeats(invite.team) >= invite.team.seatLimit) {
+  // Count members only — the invite being accepted is itself a pending invite,
+  // so counting `members + pending invites` would let a full team block the
+  // very accept that consumes that pending seat.
+  if (invite.team.members.length >= invite.team.seatLimit) {
     return { error: "This team has no seats left." };
   }
 
