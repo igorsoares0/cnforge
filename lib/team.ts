@@ -35,28 +35,38 @@ export async function claimPendingInvites(userId: string): Promise<void> {
       where: { teamId_userId: { teamId: invite.teamId, userId } },
       select: { id: true },
     });
-    if (member) {
-      // Already on the team (e.g. accepted via the explicit button) — just
-      // settle the invite's status.
-      await db.teamInvite.update({
-        where: { id: invite.id },
-        data: { status: "accepted" },
-      });
-      continue;
+
+    if (!member) {
+      // Seat-aware: count members rather than `members + pending invites` so
+      // the very invite we're accepting can't block itself at the limit.
+      if (invite.team._count.members >= invite.team.seatLimit) continue;
+
+      try {
+        await db.teamMember.create({
+          data: { teamId: invite.teamId, userId, role: "member" },
+        });
+      } catch (err) {
+        // The membership check above is a TOCTOU window: concurrent dashboard
+        // loads can both pass it and race to insert. The (teamId, userId)
+        // unique constraint makes that safe — the loser just treats it as
+        // "already a member" and falls through to settle the invite.
+        if (!isUniqueViolation(err)) throw err;
+      }
     }
 
-    // Seat-aware: count members rather than `members + pending invites` so the
-    // very invite we're accepting can't block itself when the team is at limit.
-    if (invite.team._count.members >= invite.team.seatLimit) continue;
-
-    await db.$transaction([
-      db.teamMember.create({
-        data: { teamId: invite.teamId, userId, role: "member" },
-      }),
-      db.teamInvite.update({
-        where: { id: invite.id },
-        data: { status: "accepted" },
-      }),
-    ]);
+    await db.teamInvite.update({
+      where: { id: invite.id },
+      data: { status: "accepted" },
+    });
   }
+}
+
+/** Prisma's P2002 = unique constraint violation. Matched by code to stay robust
+ * across the RSC bundle, where `instanceof` checks can be unreliable. */
+function isUniqueViolation(err: unknown): boolean {
+  return (
+    typeof err === "object" &&
+    err !== null &&
+    (err as { code?: unknown }).code === "P2002"
+  );
 }
