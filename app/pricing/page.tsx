@@ -109,7 +109,7 @@ export default async function PricingPage() {
                     label={`Get ${p.name}`}
                   />
                 ) : (
-                  <Button size="lg" className="w-full" render={
+                  <Button size="lg" className="w-full" nativeButton={false} render={
                     <Link href={`/login?callbackUrl=/pricing`}>Sign in to buy</Link>
                   } />
                 )}

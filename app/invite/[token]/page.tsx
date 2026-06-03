@@ -55,6 +55,7 @@ export default async function InvitePage({
                   </p>
                   <Button
                     size="lg"
+                    nativeButton={false}
                     render={
                       <Link href={`/login?callbackUrl=/invite/${token}`}>
                         Sign in
@@ -64,6 +65,7 @@ export default async function InvitePage({
                   <Button
                     variant="outline"
                     size="lg"
+                    nativeButton={false}
                     render={
                       <Link href={`/signup?callbackUrl=/invite/${token}`}>
                         Create account
