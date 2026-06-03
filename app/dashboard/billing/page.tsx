@@ -3,6 +3,7 @@ import Link from "next/link";
 import { auth } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { db } from "@/lib/db";
+import { getAccess } from "@/lib/entitlements";
 
 function formatAmount(amount: number | null, currency: string | null) {
   if (amount == null) return "—";
@@ -16,10 +17,25 @@ function formatAmount(amount: number | null, currency: string | null) {
 
 export default async function BillingPage() {
   const session = await auth();
-  const purchases = await db.purchase.findMany({
-    where: { userId: session!.user.id },
-    orderBy: { createdAt: "desc" },
-  });
+  const userId = session!.user.id;
+  const [purchases, access] = await Promise.all([
+    db.purchase.findMany({
+      where: { userId },
+      orderBy: { createdAt: "desc" },
+    }),
+    getAccess(userId),
+  ]);
+
+  // A team member's access comes from the owner's purchase, so they have no
+  // Purchase rows of their own. Show their team access instead of the "buy a
+  // plan" upsell, which would wrongly imply they have no access.
+  const team =
+    purchases.length === 0 && access.via === "team" && access.teamId
+      ? await db.team.findUnique({
+          where: { id: access.teamId },
+          select: { name: true },
+        })
+      : null;
 
   return (
     <div>
@@ -28,7 +44,17 @@ export default async function BillingPage() {
         Your one-time purchases.
       </p>
 
-      {purchases.length === 0 ? (
+      {team ? (
+        <div className="mt-8 rounded-xl border border-border bg-card p-5">
+          <p className="text-sm font-medium">
+            Pro access via {team.name}
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            You&apos;re a member of this team, which unlocks every pro block.
+            Billing is managed by the team owner.
+          </p>
+        </div>
+      ) : purchases.length === 0 ? (
         <div className="mt-8 rounded-xl border border-border bg-muted p-5">
           <p className="text-sm">You haven&apos;t purchased a plan yet.</p>
           <div className="mt-4">
